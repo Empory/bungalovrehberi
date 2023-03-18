@@ -47,31 +47,31 @@ let initialDragOffset;
 let currentDragOffset;
 
 // Écouteur délégué des événements de clic
-document.querySelector('.slider-arrows').addEventListener('click', (event) => {
-  let clickEventPath = event.composedPath().slice(0, -2);
+// document.querySelector('.slider-arrows').addEventListener('click', (event) => {
+//   let clickEventPath = event.composedPath().slice(0, -2);
   
-  console.log("Coucou");
+//   console.log("Coucou");
   
-  for (let element of clickEventPath) {
-    if ('previous' in element.dataset) {
-      previousSlideClickHandler(element, sliderContainer);
-      break;
-    } else if ('next' in element.dataset) {
-      nextSlideClickHandler(element, sliderContainer);
-      break;
-    }
-  }
-});
+//   for (let element of clickEventPath) {
+//     if ('previous' in element.dataset) {
+//       previousSlideClickHandler(element, sliderContainer);
+//       break;
+//     } else if ('next' in element.dataset) {
+//       nextSlideClickHandler(element, sliderContainer);
+//       break;
+//     }
+//   }
+// });
 
-// Gestionnaire du bouton précédent
-function previousSlideClickHandler(element, section) {
-  scrollToSlide('previous');
-}
+// // Gestionnaire du bouton précédent
+// function previousSlideClickHandler(element, section) {
+//   scrollToSlide('previous');
+// }
 
-// Gestionnaire du bouton suivant
-function nextSlideClickHandler(element, section) {
-  scrollToSlide('next');
-}
+// // Gestionnaire du bouton suivant
+// function nextSlideClickHandler(element, section) {
+//   scrollToSlide('next');
+// }
 
 // Écouteur d'événements liés au drag du slider
 sliderContainer.addEventListener('mousedown', (event) => desktopScrollMouseDownHandler(event));
@@ -149,3 +149,86 @@ function scrollToSlide(command) {
   
   slider.scroll({ left: nextSliderOffset, behavior: 'smooth' });
 }
+
+
+
+
+const viewBtn = document.querySelector(".share"),
+    share1 = document.getElementById("share1")
+    share2 = document.getElementById("share2")
+    share3 = document.getElementById("share3")
+    share4 = document.getElementById("share4")
+    share5 = document.getElementById("share5")
+    share6 = document.getElementById("share6")
+    share7 = document.getElementById("share7")
+    body = document.querySelector("body");
+    popup = document.querySelector(".popup"),
+    close = document.querySelector(".fa-times")
+    
+    // Get the pop-up container element
+    var popupContainer = document.querySelector('.popup-container');
+
+    // Add a scroll event listener to the window object
+    window.addEventListener('scroll', function() {
+      // Calculate the scroll position of the user
+      var scrollPosition = window.scrollY;
+
+      // Show the pop-up when the user has scrolled 500 pixels or more
+      // if (scrollPosition >= 500) {
+      //   popup.classList.add('show');
+      // } else {
+      //   popup.classList.remove('show');
+      // }
+    });
+
+    
+    share1.onclick = ()=>{ 
+      popup.classList.toggle("show");
+    }
+    close.onclick = ()=>{
+      share1.click();
+    }
+    share2.onclick = ()=>{ 
+      popup.classList.toggle("show");
+    }
+    close.onclick = ()=>{
+      share2.click();
+    }
+    share3.onclick = ()=>{ 
+      popup.classList.toggle("show");
+    }
+    close.onclick = ()=>{
+      share3.click();
+    }
+    share4.onclick = ()=>{ 
+      popup.classList.toggle("show");
+    }
+    close.onclick = ()=>{
+      share4.click();
+    }
+    share5.onclick = ()=>{ 
+      popup.classList.toggle("show");
+    }
+    close.onclick = ()=>{
+      share5.click();
+    }
+    share6.onclick = ()=>{ 
+      popup.classList.toggle("show");
+    }
+    close.onclick = ()=>{
+      share6.click();
+    }
+    share7.onclick = ()=>{ 
+      popup.classList.toggle("show");
+    }
+    close.onclick = ()=>{
+      share7.click();
+    }
+    if (popup.classList === "show") {
+      body.style.background = rgba(0,0,0,.153);
+    } else {
+      
+      
+    }
+
+    
