@@ -75,7 +75,7 @@ header{
     justify-content: center;
     align-items: center;
     transition: .5s;
-    z-index: 10;
+    z-index: 9999;
   }
 
   .menu-line1{
@@ -598,7 +598,9 @@ header{
     text-align: center;
     padding-bottom: 20px;
   }
+  .footer{
 
+  }
   .links{
     padding-top: 20px;
     display: flex;

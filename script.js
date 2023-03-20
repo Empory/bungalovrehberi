@@ -149,19 +149,37 @@ function scrollToSlide(command) {
   
   slider.scroll({ left: nextSliderOffset, behavior: 'smooth' });
 }
+let slideIndex = [1,1];
+    let slideId = [[document.querySelectorAll(".mySlides1")], [document.querySelectorAll(".mySlides2")]];
+    showSlides(1, 0);
+    showSlides(1, 1);
 
+    function plusSlides(n, no) {
+      showSlides(slideIndex[no] += n, no);
+    }
 
+    function showSlides(n, no) {
+      let i;
+      let x = document.getElementsByClassName(slideId[no]);
+      if (n > x.length) {slideIndex[no] = 1}    
+      if (n < 1) {slideIndex[no] = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      x[slideIndex[no]-1].style.display = "block";  
+    }
 
+    
 
 const viewBtn = document.querySelector(".share"),
-    share1 = document.getElementById("share1")
-    share2 = document.getElementById("share2")
-    share3 = document.getElementById("share3")
-    share4 = document.getElementById("share4")
-    share5 = document.getElementById("share5")
-    share6 = document.getElementById("share6")
-    share7 = document.getElementById("share7")
-    body = document.querySelector("body");
+    share1 = document.getElementById("share1"),
+    share2 = document.getElementById("share2"),
+    share3 = document.getElementById("share3"),
+    share4 = document.getElementById("share4"),
+    share5 = document.getElementById("share5"),
+    share6 = document.getElementById("share6"),
+    share7 = document.getElementById("share7"),
+    body = document.querySelector("body")
     popup = document.querySelector(".popup"),
     close = document.querySelector(".fa-times")
     
@@ -180,8 +198,6 @@ const viewBtn = document.querySelector(".share"),
       //   popup.classList.remove('show');
       // }
     });
-
-    
     share1.onclick = ()=>{ 
       popup.classList.toggle("show");
     }
@@ -224,12 +240,8 @@ const viewBtn = document.querySelector(".share"),
     close.onclick = ()=>{
       share7.click();
     }
-    if (popup.classList === "show") {
-      body.style.background = rgba(0,0,0,.153);
-    } else {
-      
-      
-    }
+    
+    
 
     
     
