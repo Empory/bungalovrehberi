@@ -24,6 +24,7 @@ ul{
 li{
     list-style: none;
 }
+
 li input{
 
     text-align:left;
@@ -434,8 +435,8 @@ header{
     box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
     transform: translate(-50%, -50%) scale(1.2);
     transition: top 0s 0.2s ease-in-out,
-                opacity 0.2s 0s ease-in-out,
-                transform 0.2s 0s ease-in-out;
+            opacity 0.2s 0s ease-in-out,
+            transform 0.2s 0s ease-in-out;
   }
   .popup.show{
     top: 50%;
@@ -543,7 +544,7 @@ header{
   .icons a:hover i{
     transform: scale(1.2);
   }
-  .content .field{
+  /* .content .field{
     margin: 12px 0 -5px 0;
     height: 45px;
     border-radius: 4px;
@@ -575,6 +576,12 @@ header{
   }
   .field .fa-share:hover{
     background: #8d39fa;
+  } */
+  .fa-share{
+    color: rgb(239,68,68);
+  }
+  .fa-share:hover{
+    color: darkblue;
   }
   #bung{
     margin-bottom:40px;
@@ -629,3 +636,39 @@ header{
     padding: 20px;
     
   }
+  img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+.prev:hover, .next:hover {
+  background-color: #f1f1f1;
+  color: black;
+}

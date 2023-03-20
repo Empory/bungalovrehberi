@@ -154,9 +154,11 @@
                         <span>2,250 ₺</span>
 
                     </div>
-                    <button class="inspect">İncele
-                        <i class="fa-solid fa-angle-right"></i>
-                    </button>
+                    <a href="white-koti.php">
+                        <button class="inspect">İncele
+                            <i class="fa-solid fa-angle-right"></i>
+                        </button>
+                    </a>    
                 </div>
             </div>
             
@@ -310,9 +312,10 @@
                         <span>2,250 ₺</span>
 
                     </div>
-                    <button class="inspect">İncele
+                    <a href="white-koti.php" class="inspect">İncele
+                        
                         <i class="fa-solid fa-angle-right"></i>
-                    </button>
+                    </a>
                 </div>
             </div>
             
