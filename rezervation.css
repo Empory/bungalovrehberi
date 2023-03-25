@@ -1,0 +1,318 @@
+
+:root {
+  --primary-color: #c40000;
+  --primary-color-lighter: rgb(255, 36, 36);
+  --primary-color-darker: darkred;
+
+  --back-ground-color: #ffffff;
+  --secondar-back-ground-color: #f5f5f5;
+
+  --dark-color: #000000;
+  --grey-color: #ccc;
+  --light-color: #ffffff;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap");
+
+h2{
+  text-align: center;
+}
+
+/* .progresses{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.progress-bar-container {
+  position: relative;
+}
+
+.progress-bar-container::before {
+  content: "";
+
+  position: absolute;
+  background-color: var(--light-color);
+  height: 10px;
+  width: 0%;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+}
+
+#progress-bar {
+  position: absolute;
+  background-color: var(--primary-color);
+  height: 10px;
+  width: 50%;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+  transition: 0.3s ease;
+}
+
+.circles-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  width: 300px;
+}
+
+.circle, .cir {
+  
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  background-color: var(--light-color);
+  transition: 0.4s ease;
+}
+
+.circle h3,.cir h3 {
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+  font-size: 20px;
+  color: var(--grey-color);
+}
+
+.cir.activ i{
+  background-color: rgb(22,163,74);
+  width:100%;
+  
+  padding-top: 10px;
+  height: 100%;
+  font-size: 20px;
+  margin-top: 10px;
+}
+.cir.activ p{
+  
+  padding: 15px 0;
+}
+
+.circle.active,.cir.activ {
+  background-color: var(--primary-color);
+}
+
+.circle.active h3,.cir.activ h3 {
+  color: var(--light-color);
+} */
+
+.form-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px;
+}
+
+.btn {
+  margin: 3px;
+  border-radius: 10%;
+  
+}
+#next{
+  font-size: 14px;
+  font-weight: bold;
+  padding:2px 15px;
+  color: white;
+  background-color: rgb(22,163,74);
+  
+}
+#next:hover {
+  cursor: pointer;
+  background-color: rgb(14, 116, 51);
+  
+}
+#next:focus{
+  border:1px solid rgb(20, 231, 98);
+}
+#prev{
+  color: white;
+  background-color: rgb(55,65,81);
+}
+
+/* .btn:disabled {
+  cursor: not-allowed;
+  background-color: var(--primary-color-darker);
+  color: var(--grey-color);
+  border-color: var(--grey-color);
+} */
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+.progresses{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contact-infos, .guest-infos,.note,.white-koti{
+  max-width: 500px;
+  width: 340px;
+  margin: 0 auto;
+  
+  margin:60px 15px 15px 15px;
+  border: 1px solid rgb(210,213,219);
+
+}
+.contact-title,.guest-title,.note-title,.white-koti-title{
+  font-weight: bold;
+  font-size: 20px;
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid rgb(210,213,219);
+  background-color: rgb(243,244,246);
+  padding-top: 10px;
+}
+.contact-title i,.guest-title i,.note-title i,.white-koti-title i{
+  margin-bottom: 14px;
+}
+.c-body,.g-body,.note-body,.white-koti-body{
+  
+  background-color: rgb(249,250,251);
+}
+.note-body{
+  padding: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.g-body p{
+  text-align: left;
+  padding: 15px 15px 0 15px;
+}
+.c-infos,.g-infos-1,.g-infos-2{
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: left;
+  display: flex;
+}
+.c-infos input{
+  max-width: 150px;
+  padding: 5px;
+}
+.g-infos-1 input,.g-infos-2 input{
+  padding: 5px;
+  max-width: 105px;
+}
+.offers{
+  gap: 10px;
+  padding: 15px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.progres{
+  justify-content: center;
+  padding: 50px 50px 0 30px;
+  background-color: white;
+  display: flex;
+}
+.step2,.step3{
+  color: white;
+}
+.progres i{
+  color: white;
+  padding: 10px;
+  border-radius: 9999px;
+  background-color: rgb(22,163,74);
+}
+.home-choose-step{
+  margin-left: 15px;
+}
+.home-choose-step p{
+  padding-top: 10px;
+}
+.personal-info-step{
+  padding-left: 15px;
+}
+.payment-step{
+  padding-left: 15px;
+}
+.personal-info-step p:first-child{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  width: 35px;
+  border-radius: 9999px;
+  background-color: rgb(37,99,235);
+}
+.payment-step p:first-child{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  width: 35px;
+  border-radius: 9999px;
+  background-color: rgb(209,213,219);
+}
+.progres hr{
+  color: gray;
+  width: 50px;
+  margin-right: 10px;
+  padding: 10px;
+}
+.white-koti{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.white-koti-body{
+  width: 100%;
+}
+.white-koti img{
+  width:100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.date{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  
+}
+.person{
+  padding: 0 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.person-guest,.count{
+  display: flex;
+  flex-direction: column;
+}
+.total-price{
+  padding: 0 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

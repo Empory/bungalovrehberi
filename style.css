@@ -4,6 +4,7 @@
     box-sizing: border-box;
 
 }
+
 body{
     height: 100vh;
     display: flex;
@@ -55,8 +56,15 @@ li button{
     padding: 5px;
 }
 .search-box{
-    margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 470px;
+  margin: 0  auto;
     
+}
+.search{
+  margin-right: 20px;
 }
 header{
     
@@ -126,12 +134,22 @@ header{
   .nav-page1 button,.nav-page2 span{
     padding: 1rem;
   }
+  /* .dropdown-menu{
+    text-align: right;
+    margin-left: auto;
+    padding-left: 30px;
+    position: fixed;
+    margin-left: auto;
+    margin-right: 0;
+    z-index: 999;
+  } */
   .dropdown button,.drop button{
     margin-left: 50px;
     padding: 5px 10px;
     width: 140px;
   }
   .nav-page2{
+    z-index: 99;
     position: fixed;
     top:0px;
     left: 60%;
@@ -351,7 +369,7 @@ header{
     display: none;
   }
   #share#active{
-    display: block;
+    display: block !important;
   }
 
   ::selection{
@@ -400,7 +418,8 @@ header{
   .popup.show{
     top: 50%;
     left: 50%;
-    opacity: 1;
+    opacity: 1 !important;
+   
     pointer-events: auto;
     transform:translate(-50%, -50%) scale(1);
     transition: top 0s 0s ease-in-out,
@@ -432,6 +451,7 @@ header{
     transition: all 0.3s ease-in-out;
   } 
   .header .close{
+    
     color: #878787;
     font-size: 17px;
     background: #f3f3f3;
@@ -503,39 +523,7 @@ header{
   .icons a:hover i{
     transform: scale(1.2);
   }
-  /* .content .field{
-    margin: 12px 0 -5px 0;
-    height: 45px;
-    border-radius: 4px;
-    padding: 0 5px;
-    border: 1px solid #757171;
-  }
-  .field.active{
-    border-color: #7d2ae8;
-  }
-  .field i{
-    width: 50px;
-    font-size: 18px;
-    text-align: center;
-  }
-  .field.active i{
-    color: #7d2ae8;
-  }
-  .field input{
-    width: 100%;
-    height: 100%;
-    border: none;
-    outline: none;
-    font-size: 15px;
-  }
-  .field .fa-share{
-    color: #fff;
-    padding: 5px 18px;
-    background: rgb(239,68,68);
-  }
-  .field .fa-share:hover{
-    background: #8d39fa;
-  } */
+  
   .fa-share{
     color: rgb(239,68,68);
   }
@@ -603,7 +591,9 @@ header{
   position: relative;
   margin: auto;
 }
-
+.next.disabled{
+  display: none;
+}
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
@@ -632,3 +622,278 @@ header{
   color: black;
 }
 
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s ease;
+}
+
+.overlay.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.main-popup {
+
+  position: fixed;
+  left: 0px;
+  top: 70px;
+  margin: 0;
+  padding: 15px;
+  max-width: 400px;
+  height: 650px;
+  background-color: #fff;
+  border-radius: 5px;
+  z-index: 9999999999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, -50%);
+  transition: all .5s ease;
+  /*overflow: hidden;*/
+}
+
+.main-popup.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(10px);
+  transition: all .5s ease;
+}
+
+@media (min-width: 500px) {
+  .main-popup {
+    width: 500px;
+    left: 50%;
+    margin: 0 0 0 -250px;
+  }
+}
+
+.popup-header {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  height: 62px;
+  width: 100%;
+}
+#popup-close-button{
+  
+
+}
+#popup-close-button i {
+  position: absolute;
+  right: 20px;
+  padding:0 20px;
+  top: 10px;
+  width: 22px;
+  height: 22px;
+}
+
+
+
+.popup-header ul {
+  margin: 0;
+  padding: 0;
+}
+
+.popup-header ul li {
+  text-align: center;
+  list-style: none;
+  width: 50%;
+  float: left;
+}
+
+.popup-header ul li a {
+  display: block;
+  padding: 20px 0;
+  margin: 0;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+#sign-in {
+  font-size: 20px;
+  color: black;
+  border-radius: 5px 0 0 0;
+  background-color: rgb(229,231,235);
+}
+
+#sign-in.active {
+  border-bottom: 3px solid rgb(227,131,38);
+  background-color: #fff;
+  color:black;
+}
+
+#register {
+  font-size: 20px;
+  color: black;
+  border-radius: 0 5px 0 0;
+  background-color: rgb(229,231,235);
+}
+
+#register.active {
+  border-bottom: 3px solid rgb(227,131,38);
+  background-color: #fff;
+  color: black;
+}
+
+.popup-content {
+  height: 600px;
+  overflow: auto;
+}
+
+form.sign-in {
+  position: relative; 
+  top: 40px;
+  left: 0;
+  font-size: 1em;
+  opacity: 1;
+  -webkit-transition: all .35s;
+  -moz-transition: all .35s;
+  -o-transition: all .35s;
+  transition: all .35s;
+}
+
+form.sign-in.move-left {
+  opacity: 0;
+  transform: translateX(-450px);
+}
+
+form label {
+  font-size: 1.1em;
+  color: black;
+  margin-left: 23px;
+}
+
+form.sign-in input {
+  background-color: rgb(229,231,235);
+  border-radius: 5px;
+  width: 90%;
+  height: 40px;
+  margin: 5px 5% 30px 5%;
+  padding: 10px;
+  font-size: 1em;
+  color: black;
+  outline: none;
+  border: none;
+}
+
+
+input#submit {
+  background-color: rgb(227,131,38);
+  color: #fff;
+  height: 50px;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 25px;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  border-radius: 5px;
+  font-size: 1em;
+  border: none;
+}
+
+form.register {
+  position: relative; 
+  top: -310px;
+  left: 0;
+  font-size: 1em;
+  opacity: 0;
+  transform: translateX(450px);
+  -webkit-transition: all .35s;
+  -moz-transition: all .35s;
+  -o-transition: all .35s;
+  transition: all .35s;
+}
+form.register p:first-child{
+  text-decoration: underline;
+}
+
+form.register.move-left {
+  opacity: 1;
+  transform: translateX(0);
+}
+.warning{
+  padding-left: 15px;
+}
+form.register input[type=text],
+form.register input[type=email],
+form.register input[type=password],
+form.register select {
+  background-color: rgb(229,231,235);
+  border-radius: 5px;
+  width: 90%;
+  height: 40px;
+  margin: 5px 5% 15px 5%;
+  padding: 10px;
+  font-size: 1em;
+  color: black;
+  outline: none;
+  border: none;
+}
+
+p.check-mark {
+  position: relative;
+  left: 50%;
+  width: 200px;
+  margin: 0 0 0 -100px;
+  padding: 0;
+  text-align: center;
+  color: black;
+  font-size: .8em;
+}
+.radio{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.checked{
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+}
+.accept{
+  padding: 15px;
+  text-align: center;
+  display:flex;
+
+}
+input[type=date]{
+  background-color: #fff;
+}
+input[type=radio] {
+    border: 0px;
+    width: 100%;
+    height: 2em;
+    
+}
+.radio label{
+  font-size: 15px;
+}
+p.check-mark a {
+  color: #a48bb9;
+}
+
+p.check-mark input {
+  border-radius: 0;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
+  color: #ceaee8;
+  outline: none;
+  border: none;
+}
+
+p.check-mark label {
+  margin-left: 5px;
+}
