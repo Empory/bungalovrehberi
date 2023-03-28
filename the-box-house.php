@@ -975,7 +975,7 @@ p.check-mark label {
   </div>
   <div class="koti-detail">
     <div class="left">
-      <p>White Koti</p>
+      <p>The Box House</p>
       <a href="#comment-section">
         <p>(1 Yorum)</p>
       </a>

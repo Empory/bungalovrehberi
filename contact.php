@@ -2,41 +2,49 @@
 
 
 
-<form class="contact" action="" method="POST">
+<form onsubmit="return false;" class="contact" action="" method="POST">
     <!-- <div class="title">
         <p style="text-align: center;">Bungalov Rehberi İletişim</p>
     </div> -->
     <h2 style="padding:20px">Bize Yazın</h2>
     <div class="name">
         <div class="first_n">
-            <label for="">Ad
-                <input type="text" name="ad" pattern="^[a-zA-Z]{2,30}$" required placeholder="Ad">
+            <label for="">Ad 
+                <input class="valid" type="text"  name="ad" min="3" max="35"  required placeholder="Ad">
+                
             </label>
         </div>
         <div class="last_n">
             <label for="">Soyad
-                <input type="text" pattern="^[a-zA-Z]{2,30}$" name="soyad" required placeholder="Soyad">
+                 <input class="valid" type="text"  name="soyad" required placeholder="Soyad">
+                 
+                  
             </label>
         </div>
     </div>
     <div class="phone-mail">
         <div class="phone">
             <label for="">Telefon
-                <input type="text" pattern="^\d{10-11}$"  name="telefon" placeholder="Telefon">
+                <input class="tel" id="phone" type="tel"  required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"  name="telefon" placeholder="Telefon">
+                
+                
             </label>
         </div>
         <div class="mail">
             <label for="">E-posta
-                <input type="email" required name="mail" placeholder="E-posta">
+                <input class="valid" type="email" required name="mail" id="mail" placeholder="E-posta">
+                
+                
             </label>
         </div>
     </div>
     <div class="message">
         <label for="">Mesajınız
-            <textarea name="message" id="" cols="30" rows="5"></textarea>
+            <textarea required class="valid" name="message" id="" cols="30" rows="5"></textarea>
+            
         </label>   
     </div>
-    <button id="submitBtn" type="submit" onclick="submitForm()" class=""><i class="fa-solid fa-paper-plane"></i> Gönder</button>
+    <button id="submitBtn"  type=""  class=""><i class="fa-solid fa-paper-plane"></i> Gönder</button>
     <div class="iletisim">
         <h2 style="padding:20px">İletişim</h2>
         <div class="adres">

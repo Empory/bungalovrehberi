@@ -55,6 +55,7 @@
     flex-direction: column;
     display: flex;
 }
+
 .contact button{
     padding: 10px;
     margin-left: 15px;
@@ -71,3 +72,11 @@
     display: flex;
     flex-direction: column;
 }
+.contact input:valid, .contact textarea:valid {
+    border: 1px solid green;
+  }
+  
+.contact input:invalid, .contact textarea:invalid {
+    border: 1px solid red;
+}
+  

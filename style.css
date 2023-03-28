@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
 *{
     padding: 0;
     margin: 0;
@@ -6,10 +8,10 @@
 }
 
 body{
+  font-family: 'Open Sans', sans-serif;
     height: 100vh;
     display: flex;
     align-items: center;
-    background: #9143f8;
 }
 .container{
     margin-top: 30px;
@@ -134,15 +136,7 @@ header{
   .nav-page1 button,.nav-page2 span{
     padding: 1rem;
   }
-  /* .dropdown-menu{
-    text-align: right;
-    margin-left: auto;
-    padding-left: 30px;
-    position: fixed;
-    margin-left: auto;
-    margin-right: 0;
-    z-index: 999;
-  } */
+  
   .dropdown button,.drop button{
     margin-left: 50px;
     padding: 5px 10px;
@@ -191,11 +185,20 @@ header{
   }
   .rate{
     display: flex;
-    padding: 15px;
+    padding: 25px 5px 0px 5px ;
     justify-content: space-between;
   }
   main p{
     display: inline;
+  }
+  .right{
+    padding: 5px;
+    gap: 5px;
+    display: flex;
+    align-items: center;
+  }
+  .share{
+    padding-bottom: 15px;
   }
   .right .rate-num{
     font-size: 20px;
@@ -326,7 +329,7 @@ header{
   }
   
   .price{
-    font-weight: bold;
+    
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -348,6 +351,7 @@ header{
   }
   .price>span:nth-child(3){
     font-size: 40px;
+    font-weight: bold;
     
   }
   .inspect{
@@ -366,16 +370,14 @@ header{
     background-color: rgb(22,163,74);
   }
   #share{
+    
     display: none;
   }
   #share#active{
     display: block !important;
   }
 
-  ::selection{
-    color: #fff;
-    background: #7d2ae8;
-  }
+ 
   .view-modal, .popup{
     position: absolute;
     left: 50%;
@@ -545,22 +547,17 @@ header{
     text-align: center;
     padding-bottom: 20px;
   }
-  .footer{
-
+  footer .pakajans{
+    max-width: 40vw;
   }
   .links{
-    padding-top: 20px;
+    padding-top: 50px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    gap: 5px;
+    justify-content: center;
     align-items: center;
   }
-  .link1,.link2,.link3{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-  }
+  
   footer a{
     text-decoration: none;
     color: rgb(31,41,55);
@@ -610,13 +607,11 @@ header{
   user-select: none;
 }
 
-/* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a grey background color */
 .prev:hover, .next:hover {
   background-color: #f1f1f1;
   color: black;
@@ -634,8 +629,24 @@ header{
   visibility: hidden;
   transition: all .5s ease;
 }
+.overlayy{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 10;
+  opacity: 1;
+  visibility: hidden;
+  transition: all .5s ease;
 
+}
 .overlay.visible {
+  opacity: 1;
+  visibility: visible;
+}
+.overlayy.visible{
   opacity: 1;
   visibility: visible;
 }
@@ -658,6 +669,26 @@ header{
   transition: all .5s ease;
   /*overflow: hidden;*/
 }
+.main-popupp{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  left: 0px;
+  top: 70px;
+  margin: 0;
+  padding: 15px;
+  max-width: 350px;
+  height: 450px;
+  background-color: #fff;
+  border-radius: 5px;
+  z-index: 9999999999;
+  opacity: 1;
+  visibility: hidden;
+  transform: translate(-50%, -50%);
+  transition: all .5s ease;
+  /*overflow: hidden;*/
+
+}
 
 .main-popup.visible {
   opacity: 1;
@@ -665,20 +696,49 @@ header{
   transform: translateY(10px);
   transition: all .5s ease;
 }
+.main-popupp.visible{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(10px);
+  transition: all .5s ease;
 
+}
 @media (min-width: 500px) {
   .main-popup {
     width: 500px;
     left: 50%;
     margin: 0 0 0 -250px;
   }
+  .main-popupp{
+    width: 500px;
+    left: 50%;
+    margin: 0 0 0 -250px;
+    height: 100%;
+
+  }
+}
+.popup-contentt {
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+}
+.popup-contentt .sign-inn label,.popup-contentt .sign-inn input{
+  display: block;
 }
 
-.popup-header {
+.popup-header{
   position: relative;
   padding: 0;
   margin: 0;
   height: 62px;
+  width: 100%;
+}
+.popup-headerr {
+  position: relative;
+  padding: 0;
+  margin: 0;
+ 
   width: 100%;
 }
 #popup-close-button{
@@ -693,6 +753,14 @@ header{
   width: 22px;
   height: 22px;
 }
+#popupp-close-button i {
+  position: absolute;
+  right: 20px;
+  padding:0 20px;
+  top: 10px;
+  width: 22px;
+  height: 22px;
+}
 
 
 
@@ -700,8 +768,18 @@ header{
   margin: 0;
   padding: 0;
 }
+.popup-headerr ul {
+  margin: 0;
+  padding: 0;
+}
 
 .popup-header ul li {
+  text-align: center;
+  list-style: none;
+  width: 50%;
+  float: left;
+}
+.popup-headerr ul li {
   text-align: center;
   list-style: none;
   width: 50%;
@@ -715,8 +793,21 @@ header{
   text-decoration: none;
   font-size: 1.2em;
 }
+.popup-headerr ul li a {
+  display: block;
+  padding: 20px 0;
+  margin: 0;
+  text-decoration: none;
+  font-size: 1.2em;
+}
 
 #sign-in {
+  font-size: 20px;
+  color: black;
+  border-radius: 5px 0 0 0;
+  background-color: rgb(229,231,235);
+}
+#sign-inn {
   font-size: 20px;
   color: black;
   border-radius: 5px 0 0 0;
@@ -728,8 +819,19 @@ header{
   background-color: #fff;
   color:black;
 }
+#sign-inn.active {
+  border-bottom: 3px solid rgb(227,131,38);
+  background-color: #fff;
+  color:black;
+}
 
 #register {
+  font-size: 20px;
+  color: black;
+  border-radius: 0 5px 0 0;
+  background-color: rgb(229,231,235);
+}
+#registerr {
   font-size: 20px;
   color: black;
   border-radius: 0 5px 0 0;
@@ -741,27 +843,74 @@ header{
   background-color: #fff;
   color: black;
 }
-
-.popup-content {
-  height: 600px;
-  overflow: auto;
+#registerr.active {
+  border-bottom: 3px solid rgb(227,131,38);
+  background-color: #fff;
+  color: black;
 }
 
+.popup-contentt {
+  position: relative;
+  top: 0;
+  left:20px;
+}
+.popup-contentt label{
+  margin-top: 5px;
+  position: relative;
+  top:0;
+  left: -20px;
+}
+.popup-contentt {
+  padding-left: 60px;
+  margin: 0 auto;
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.popup-contentt input, .popup-contentt textarea{
+  background-color: rgb(243,244,246);
+  padding: 10px;
+  border: 1px solid rgb(215,219,224);
+  border-radius: 5px;
+  max-width: 200px;
+}
+.popup-contentt button {
+  margin-left: 10px;
+  padding: 10px;
+  width: 60%;
+  color: white;
+  background-color: #e38326;
+}
+.popup-contentt label{
+}
 form.sign-in {
   position: relative; 
   top: 40px;
   left: 0;
+  -moz-transition: all .35s;
+  -o-transition: all .35s;
   font-size: 1em;
   opacity: 1;
   -webkit-transition: all .35s;
-  -moz-transition: all .35s;
-  -o-transition: all .35s;
   transition: all .35s;
+}
+form.sign-inn {
+  
+  
+  
+  font-size: 1em;
+  opacity: 1;
+ 
 }
 
 form.sign-in.move-left {
   opacity: 0;
   transform: translateX(-450px);
+}
+form.sign-inn.move-left {
+  opacity: 0;
+  transform: translateX(-250px);
 }
 
 form label {
@@ -801,6 +950,9 @@ input#submit {
 }
 
 form.register {
+  display: flex;
+  flex-direction: column;
+  padding-top: 0px;
   position: relative; 
   top: -310px;
   left: 0;
@@ -811,6 +963,11 @@ form.register {
   -moz-transition: all .35s;
   -o-transition: all .35s;
   transition: all .35s;
+}
+
+form.register input{
+  
+  
 }
 form.register p:first-child{
   text-decoration: underline;
@@ -823,7 +980,7 @@ form.register.move-left {
 .warning{
   padding-left: 15px;
 }
-form.register input[type=text],
+/* form.register input[type=text],
 form.register input[type=email],
 form.register input[type=password],
 form.register select {
@@ -837,7 +994,7 @@ form.register select {
   color: black;
   outline: none;
   border: none;
-}
+} */
 
 p.check-mark {
   position: relative;

@@ -17,7 +17,10 @@
   opacity: 1;
   visibility: visible;
 }
-
+.overlayy.visible{
+  opacity: 1;
+  visibility: visible;
+}
 .main-popup {
 
   position: fixed;
@@ -34,9 +37,25 @@
   visibility: hidden;
   transform: translate(-50%, -50%);
   transition: all .5s ease;
-  /*overflow: hidden;*/
 }
+.main-popupp{
+  position: fixed;
+  left: 0px;
+  top: 70px;
+  margin: 0;
+  padding: 15px;
+  max-width: 400px;
+  height: 650px;
+  background-color: #fff;
+  border-radius: 5px;
+  z-index: 9999999999;
+  opacity: 1;
+  visibility: hidden;
+  transform: translate(-50%, -50%);
+  transition: all .5s ease;
+  /*overflow: hidden;*/
 
+}
 .main-popup.visible {
   opacity: 1;
   visibility: visible;
@@ -67,6 +86,15 @@
   top: 10px;
   width: 22px;
   height: 22px;
+}
+#popupp-close-button i{
+    position: fixed;
+    right: 20px;
+    padding:0 20px;
+    top: 10px;
+    width: 22px;
+    height: 22px;
+
 }
 
 
@@ -272,7 +300,7 @@ p.check-mark label {
         </style>
         <main>
             <div class="banner">
-                <img style="max-width: 70wv;" src="https://bungalovrehberi.com/web/assets/images/ust_resim.jpg" alt="">
+                <img src="https://bungalovrehberi.com/web/assets/images/ust_resim.jpg" alt="">
             </div>
             <div class="bungalov">
                 <div class="bungalov-img">
@@ -288,12 +316,12 @@ p.check-mark label {
                             </div>
                         </div>
                         <div class="right" >
-                            <p class="rate-num">4.0</p>
-                            <p>Keyifli</p>
                             <div class="share" id="share1">
                                 <i class="fas fa-share"></i>
                                 <p>Paylaş</p>
                             </div>    
+                            <p class="rate-num">4.0</p>
+                            <p>Keyifli</p>
                             <div class="popup">
                                 <header class="header">
                                     <p>Sosyal medyada paylaşın</p>
@@ -421,8 +449,8 @@ p.check-mark label {
                     </div>
                     <div class="price">
                         <span>2,350 ₺</span>
-                        <span>%4 İNDİRİM</span>
-                        <span>2,250 ₺</span>
+                        <span>%11 İNDİRİM</span>
+                        <span>2,100 ₺</span>
 
                     </div>
                     <a href="white-koti.php">
@@ -435,7 +463,7 @@ p.check-mark label {
             
             <div class="bungalov">
                 <div class="bungalov-img">
-                    <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3ad5b-2b46-4cbc-bd99-a04f316f7e6d-wshtg0.jpeg" alt="">
+                    <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3a190-2aab-4360-8739-245bb1b8913b-iu1vlm.jpeg" alt="">
                 </div>
                 <div class="bungalov-details">
                     <div class="rate">
@@ -578,12 +606,12 @@ p.check-mark label {
                         </div>
                     </div>
                     <div class="price">
-                        <span>2,350 ₺</span>
-                        <span>%4 İNDİRİM</span>
-                        <span>2,250 ₺</span>
+                        <span class="price-before">2,750 ₺</span>
+                        <span class="disc">%30 İNDİRİM</span>
+                        <span>1,925 ₺</span>
 
                     </div>
-                    <a href="white-koti.php">
+                    <a href="navy-blue-koti.php">
                         <button class="inspect">İncele
                             <i class="fa-solid fa-angle-right"></i>
                         </button>
@@ -593,7 +621,7 @@ p.check-mark label {
             
             <div class="bungalov">
                 <div class="bungalov-img">
-                    <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3ad5b-2b46-4cbc-bd99-a04f316f7e6d-wshtg0.jpeg" alt="">
+                    <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a39ad4-6d73-41ca-a718-2b9fc15f90e9-bvhqiu.jpeg" alt="">
                 </div>
                 <div class="bungalov-details">
                     <div class="rate">
@@ -736,12 +764,12 @@ p.check-mark label {
                         </div>
                     </div>
                     <div class="price">
-                        <span>2,350 ₺</span>
-                        <span>%4 İNDİRİM</span>
-                        <span>2,250 ₺</span>
+                        <span>2,750 ₺</span>
+                        <span>%20 İNDİRİM</span>
+                        <span>2,200 ₺</span>
 
                     </div>
-                    <a href="white-koti.php">
+                    <a href="brown-koti.php">
                         <button class="inspect">İncele
                             <i class="fa-solid fa-angle-right"></i>
                         </button>
@@ -751,7 +779,7 @@ p.check-mark label {
             
             <div class="bungalov">
                 <div class="bungalov-img">
-                    <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3ad5b-2b46-4cbc-bd99-a04f316f7e6d-wshtg0.jpeg" alt="">
+                    <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3966a-ef09-4093-b077-df1fe94a76de-trfzkn.jpeg" alt="">
                 </div>
                 <div class="bungalov-details">
                     <div class="rate">
@@ -763,12 +791,12 @@ p.check-mark label {
                             </div>
                         </div>
                         <div class="right" >
-                            <p class="rate-num">4.0</p>
-                            <p>Keyifli</p>
                             <div class="share" id="share4">
                                 <i class="fas fa-share"></i>
                                 <p>Paylaş</p>
                             </div>    
+                            <p class="rate-num">4.0</p>
+                            <p>Keyifli</p>
                             <div class="popup">
                                 <header class="header">
                                     <p>Sosyal medyada paylaşın</p>
@@ -892,37 +920,38 @@ p.check-mark label {
                         </div>
                     </div>
                     <div class="price">
-                        <span>2,350 ₺</span>
-                        <span>%4 İNDİRİM</span>
-                        <span>2,250 ₺</span>
+                        <span>2,750 ₺</span>
+                        <span>%20 İNDİRİM</span>
+                        <span>2,200 ₺</span>
 
                     </div>
-                    <button class="inspect">İncele
-                        <i class="fa-solid fa-angle-right"></i>
-                    </button>
+                    <a href="tiny-house-country.php">
+                        <button class="inspect">İncele
+                            <i class="fa-solid fa-angle-right"></i>
+                        </button>
+                    </a>
                 </div>
             </div>
             
             <div class="bungalov">
                 <div class="bungalov-img">
-                    <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3ad5b-2b46-4cbc-bd99-a04f316f7e6d-wshtg0.jpeg" alt="">
+                    <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a391de-e39c-4761-99d4-103dbe6b315b-huamuf.jpg" alt="">
                 </div>
                 <div class="bungalov-details">
                     <div class="rate">
                         <div class="left">
-                            <p>White Koti</p>
+                            <p>The Box House</p>
                             <div class="location">
                                 <p>Sakarya / Sapanca</p>
                                 <i class="fa fa-map-marker-alt"></i>
                             </div>
                         </div>
                         <div class="right" >
-                            <p class="rate-num">4.0</p>
-                            <p>Keyifli</p>
                             <div class="share" id="share5">
                                 <i class="fas fa-share"></i>
                                 <p>Paylaş</p>
                             </div>    
+                            
                             <div class="popup">
                                 <header class="header">
                                     <p>Sosyal medyada paylaşın</p>
@@ -1049,37 +1078,38 @@ p.check-mark label {
                         </div>
                     </div>
                     <div class="price">
-                        <span>2,350 ₺</span>
-                        <span>%4 İNDİRİM</span>
-                        <span>2,250 ₺</span>
+                        <span>2,750 ₺</span>
+                        <span>%20 İNDİRİM</span>
+                        <span>2,200 ₺</span>
 
                     </div>
-                    <button class="inspect">İncele
-                        <i class="fa-solid fa-angle-right"></i>
-                    </button>
+                    <a href="the-box-house.php">
+                        <button class="inspect">İncele
+                            <i class="fa-solid fa-angle-right"></i>
+                        </button>
+                    </a>
                 </div>
             </div>
             
             <div class="bungalov">
                 <div class="bungalov-img">
-                    <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3ad5b-2b46-4cbc-bd99-a04f316f7e6d-wshtg0.jpeg" alt="">
+                    <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a24028-670e-4a56-9d7e-fe86360909ce-cz2quv.jpeg" alt="">
                 </div>
                 <div class="bungalov-details">
                     <div class="rate">
                         <div class="left">
-                            <p>White Koti</p>
+                            <p>Tiny House Red Door</p>
                             <div class="location">
                                 <p>Sakarya / Sapanca</p>
                                 <i class="fa fa-map-marker-alt"></i>
                             </div>
                         </div>
                         <div class="right" >
-                            <p class="rate-num">4.0</p>
-                            <p>Keyifli</p>
                             <div class="share" id="share6">
                                 <i class="fas fa-share"></i>
                                 <p>Paylaş</p>
                             </div>    
+                            
                             <div class="popup">
                                 <header class="header">
                                     <p>Sosyal medyada paylaşın</p>
@@ -1206,37 +1236,39 @@ p.check-mark label {
                         </div>
                     </div>
                     <div class="price">
-                        <span>2,350 ₺</span>
-                        <span>%4 İNDİRİM</span>
-                        <span>2,250 ₺</span>
+                        <span>3,500 ₺</span>
+                        <span>%30 İNDİRİM</span>
+                        <span>2,450 ₺</span>
 
                     </div>
-                    <button class="inspect">İncele
-                        <i class="fa-solid fa-angle-right"></i>
-                    </button>
+                    <a href="tiny-house-red-door.php">
+                        <button class="inspect">İncele
+                            <i class="fa-solid fa-angle-right"></i>
+                        </button>
+                    </a>
                 </div>
             </div>
             
             <div class="bungalov" id="bung">
                 <div class="bungalov-img">
-                    <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3ad5b-2b46-4cbc-bd99-a04f316f7e6d-wshtg0.jpeg" alt="">
+                    <img src="https://bungalovrehberi.com/storage/web/uploads/evler/979c3c19_628d_4e68_935f_aa08913c1b29_xv6lug.jpeg" alt="">
                 </div>
                 <div class="bungalov-details">
                     <div class="rate">
                         <div class="left">
-                            <p>White Koti</p>
+                            <p>Tiny House</p>
                             <div class="location">
                                 <p>Sakarya / Sapanca</p>
                                 <i class="fa fa-map-marker-alt"></i>
                             </div>
                         </div>
                         <div class="right">
-                            <p class="rate-num">4.0</p>
-                            <p>Keyifli</p>
                             <div class="share" id="share7">
                                 <i class="fas fa-share"></i>
                                 <p>Paylaş</p>
                             </div>    
+                            <p class="rate-num">4.0</p>
+                            <p>Keyifli</p>
                             <div class="popup">
                                 <header class="header">
                                     <p>Sosyal medyada paylaşın</p>
@@ -1363,20 +1395,24 @@ p.check-mark label {
                         </div>
                     </div>
                     <div class="price">
-                        <span>2,350 ₺</span>
-                        <span>%4 İNDİRİM</span>
-                        <span>2,250 ₺</span>
+                        <span>4,000 ₺</span>
+                        <span>%40 İNDİRİM</span>
+                        <span>2,400 ₺</span>
 
                     </div>
-                    <button class="inspect">İncele
-                        <i class="fa-solid fa-angle-right"></i>
-                    </button>
+                    <a href="tiny-house.php">
+                        <button class="inspect">İncele
+                            <i class="fa-solid fa-angle-right"></i>
+                        </button>
+                    </a>
                 </div>
             </div>
             
            
             
         </main> 
+        <script text="javascript" src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
         <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
@@ -1385,6 +1421,9 @@ p.check-mark label {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script>
             window.onload=()=>{
+            
+            let pricebefore = document.querySelector(".price-before").textContent;
+            document.querySelector(".disc").innerHTML = pricebefore;    
             const $ = document.querySelector.bind(document);
             const $All = document.querySelectorAll.bind(document);
 
@@ -1408,19 +1447,11 @@ p.check-mark label {
                 popup = document.querySelector(".popup"),
                 close = document.querySelector(".fa-times")
     
-            // Get the pop-up container element
             var popupContainer = document.querySelector('.popup-container');
 
-            // Add a scroll event listener to the window object
             window.addEventListener('scroll', function() {
                 var scrollPosition = window.scrollY;
 
-                // Show the pop-up when the user has scrolled 500 pixels or more
-                // if (scrollPosition >= 500) {
-                //   popup.classList.add('show');
-                // } else {
-                //   popup.classList.remove('show');
-                // }
                 });
                 share1.onclick = ()=>{ 
                 popup.classList.toggle("show");
@@ -1465,10 +1496,9 @@ p.check-mark label {
                 share7.click();
                 }
                 
-            
+        
             }
             $(function() {
-                //defining all needed variables
                 var $overlay = $('.overlay');
                 var $mainPopUp = $('.main-popup')
                 var $signIn = $('#sign-in');
@@ -1480,7 +1510,6 @@ p.check-mark label {
                 var $secondChild = $('nav ul li:nth-child(2)');
                 var $thirdChild = $('nav ul li:nth-child(3)');
                 
-                //defining function to create underline initial state on document load
                 function initialState() {
                     $('.underline').css({
                     "width": $firstChild.width(),
@@ -1488,20 +1517,19 @@ p.check-mark label {
                     "top": $firstChild.position().top + $firstChild.outerHeight(true) + 'px'
                     });
                 }
-                initialState(); //() used after calling function to call function immediately on doc load
+                initialState();
                 
-                //defining function to change underline depending on which li is active
                 function changeUnderline(el) {
                     $('.underline').css({
                     "width": el.width(),
                     "left": el.position().left,
                     "top": el.position().top + el.outerHeight(true) + 'px'
                     });
-                } //note: have not called the function...don't want it called immediately
+                } 
                 
                 $firstChild.on('click', function(){
                     var el = $firstChild;
-                    changeUnderline(el); //call the changeUnderline function with el as the perameter within the called function
+                    changeUnderline(el);
                     $secondChild.removeClass('active');
                     $thirdChild.removeClass('active');
                     $(this).addClass('active');
@@ -1509,7 +1537,7 @@ p.check-mark label {
                 
                 $secondChild.on('click', function(){
                     var el = $secondChild;
-                    changeUnderline(el); //call the changeUnderline function with el as the perameter within the called function
+                    changeUnderline(el); 
                     $firstChild.removeClass('active');
                     $thirdChild.removeClass('active');
                     $(this).addClass('active');
@@ -1517,7 +1545,7 @@ p.check-mark label {
                 
                 $thirdChild.on('click', function(){
                     var el = $thirdChild;
-                    changeUnderline(el); //call the changeUnderline function with el as the perameter within the called function
+                    changeUnderline(el); 
                     $firstChild.removeClass('active');
                     $secondChild.removeClass('active');
                     $(this).addClass('active');
@@ -1557,7 +1585,100 @@ p.check-mark label {
                 });
                 
                 $('input').on('submit', function(e){
-                    e.preventDefault(); //used to prevent submission of form...remove for real use
+                    e.preventDefault(); 
+                });
+            });
+            $(function() {
+                
+                var $overlayy = $('.overlayy');
+                var $mainpopupp = $('.main-popupp')
+                var $signinn = $('#sign-inn');
+                var $registerr = $('#registerr');
+                var $formsigninn = $('form.sign-inn');
+                var $formregisterr = $('form.registerr');
+                
+                var $firstChild = $('nav ul li:first-child');
+                var $secondChild = $('nav ul li:nth-child(2)');
+                var $thirdChild = $('nav ul li:nth-child(3)');
+                
+                
+                function initialState() {
+                    $('.underline').css({
+                    "width": $firstChild.width(),
+                    "left": $firstChild.position().left,
+                    "top": $firstChild.position().top + $firstChild.outerHeight(true) + 'px'
+                    });
+                }
+                initialState(); 
+                
+                
+                function changeUnderline(el) {
+                    $('.underline').css({
+                    "width": el.width(),
+                    "left": el.position().left,
+                    "top": el.position().top + el.outerHeight(true) + 'px'
+                    });
+                } 
+                
+                $firstChild.on('click', function(){
+                    var el = $firstChild;
+                    changeUnderline(el);
+                    $secondChild.removeClass('active');
+                    $thirdChild.removeClass('active');
+                    $(this).addClass('active');
+                });
+                
+                $secondChild.on('click', function(){
+                    var el = $secondChild;
+                    changeUnderline(el); 
+                    $firstChild.removeClass('active');
+                    $thirdChild.removeClass('active');
+                    $(this).addClass('active');
+                });
+                
+                $thirdChild.on('click', function(){
+                    var el = $thirdChild;
+                    changeUnderline(el); 
+                    $firstChild.removeClass('active');
+                    $secondChild.removeClass('active');
+                    $(this).addClass('active');
+                });
+                
+                
+                $('.add-bungalov').on('click', function(){
+                    $overlayy.addClass('visible');
+                    $mainpopupp.addClass('visible');
+                    $signinn.addClass('active');
+                    $registerr.removeClass('active');
+                    $formregisterr.removeClass('move-left');
+                    $formsigninn.removeClass('move-left');
+                });
+                $overlayy.on('click', function(){
+                    $(this).removeClass('visible');
+                    $mainPopUp.removeClass('visible');
+                });
+                $('#popupp-close-button i').on('click', function(e){
+                    e.preventDefault();
+                    $overlayy.removeClass('visible');
+                    $mainpopupp.removeClass('visible');
+                });
+                
+                $signinn.on('click', function(){
+                    $signinn.addClass('active');
+                    $registerr.removeClass('active');
+                    $formsigninn.removeClass('move-left');
+                    $formregisterr.removeClass('move-left');
+                });
+                
+                $registerr.on('click', function(){
+                    $signinn.removeClass('active');
+                    $registerr.addClass('active');
+                    $formsigninn.addClass('move-left');
+                    $formregisterr.addClass('move-left');
+                });
+                
+                $('input').on('submit', function(e){
+                    e.preventDefault(); 
                 });
             });
         </script>

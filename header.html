@@ -113,7 +113,7 @@
                                   
                             </div>
                             <div class="drop">
-                                <button type="button" class=" dropdown" data-toggle="dropdown">
+                                <button type="button" class="dropdown add-bungalov" data-toggle="dropdown">
                                 Bungalov Ekle
                                 </button>
                                 
@@ -135,4 +135,113 @@
                     </li>
                 </ul>
             </nav>
+            <div class="overlay">
+            </div>
+            <div class="main-popup">
+              <div class="popup-header">
+                <div id="popup-close-button"><i class="fa-sharp
+                fa-2xl fa-solid fa-circle-xmark" style="color: #e38326;"></i>
+                </div>
+                
+                <ul>
+                  <li><a  id="sign-in">Giriş Yap</a></li>
+                  <li><a  id="register">Üye Ol</a></li>
+                </ul>
+              </div>
+              <div class="popup-content">
+                <form action="#" class="sign-in">
+                  <label for="email">E-Posta</label>
+                  <input type="text" placeholder="E-posta" id="email">
+                  <label for="password">Şifre:</label>
+                  <input type="password" placeholder="Şifre" id="password">
+                  <p class="check-mark">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">Şifremi Unuttum</label>
+                  </p>
+                  <input type="submit" id="submit" value="Giriş Yap">
+                </form>
+              
+                <form action="#" class="register">
+                  <label for="name-register">Ad</label>
+                  <input type="text" placeholder="Ad" id="first-name-register">
+                  <label for="last-name-register">Soyad</label>
+                  <input type="text" placeholder="Soyad" id="last-name-register">
+                  <label for="phone-register">Cep Telefonu</label>
+                  <input type="text" placeholder="Cep Telefonu" id="phone-register">
+                  <label for="city-register">İl</label>
+                  <select name="uyelik_il" id="uyelik_il" class="block appearance-none w-full bg-gray-100 border border-gray-300 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none" required=""> 
+                    <option value="">Seçiniz</option> <option value="1">Adana</option> <option value="2">Adıyaman</option> <option value="3">Afyon</option> <option value="4">Ağrı</option> <option value="68">Aksaray</option> <option value="5">Amasya</option> <option value="6">Ankara</option> <option value="7">Antalya</option> <option value="75">Ardahan</option> <option value="8">Artvi̇n</option> <option value="9">Aydın</option> <option value="10">Balıkesi̇r</option> <option value="74">Bartın</option> <option value="72">Batman</option> <option value="69">Bayburt</option> <option value="11">Bi̇leci̇k</option> <option value="12">Bi̇ngöl</option> <option value="13">Bi̇tli̇s</option> <option value="14">Bolu</option> <option value="15">Burdur</option> <option value="16">Bursa</option> <option value="17">Çanakkale</option> <option value="18">Çankırı</option> <option value="19">Çorum</option> <option value="20">Deni̇zli̇</option> <option value="21">Di̇yarbakır</option> <option value="81">Düzce</option> <option value="22">Edi̇rne</option> <option value="23">Elazığ</option> <option value="24">Erzi̇ncan</option> <option value="25">Erzurum</option> <option value="26">Eski̇şehi̇r</option> <option value="27">Gazi̇antep</option> <option value="28">Gi̇resun</option> <option value="29">Gümüşhane</option> <option value="30">Hakkari̇</option> <option value="31">Hatay</option> <option value="33">İçel</option> <option value="76">Iğdır</option> <option value="32">Isparta</option> <option value="34">İstanbul</option> <option value="35">İzmi̇r</option> <option value="46">Kahramanmaraş</option> <option value="78">Karabük</option> <option value="70">Karaman</option> <option value="36">Kars</option> <option value="37">Kastamonu</option> <option value="38">Kayseri̇</option> <option value="79">Ki̇li̇s</option> <option value="71">Kırıkkale</option> <option value="39">Kırklareli̇</option> <option value="40">Kırşehi̇r</option> <option value="41">Kocaeli̇</option> <option value="42">Konya</option> <option value="43">Kütahya</option> <option value="44">Malatya</option> <option value="45">Mani̇sa</option> <option value="47">Mardi̇n</option> <option value="48">Muğla</option> <option value="49">Muş</option> <option value="50">Nevşehi̇r</option> <option value="51">Ni̇ğde</option> <option value="52">Ordu</option> <option value="80">Osmani̇ye</option> <option value="53">Ri̇ze</option> <option value="54">Sakarya</option> <option value="55">Samsun</option> <option value="63">Şanlıurfa</option> <option value="56">Si̇i̇rt</option> <option value="57">Si̇nop</option> <option value="58">Si̇vas</option> <option value="73">Şırnak</option> <option value="59">Teki̇rdağ</option> <option value="60">Tokat</option> <option value="61">Trabzon</option> <option value="62">Tunceli̇</option> <option value="64">Uşak</option> <option value="65">Van</option> <option value="77">Yalova</option> <option value="66">Yozgat</option> <option value="67">Zonguldak</option> 
+                  </select>
+                  <label for="email">E-Posta</label>
+                  <input type="text" placeholder="E-posta" id="email">
+                  <label for="password">Şifre:</label>
+                  <input type="password" placeholder="Şifre" id="password">
+                  <p class="warning">Şifreniz en az 6 karakter olmalıdır.</p>
+                  <div class="radio">
+                    <div class="bireysel">
+                      <input type="radio" name="radio" id="">
+                      <label for="">Bireysel Üye</label>
+                    </div>
+                    <div class="kurumsal">
+                      <input type="radio" name="radio" id="">
+                      <label for="">Kurumsal Üye</label>
+                    </div>
+                  </div>
+                  <!-- <p class="check-mark">
+                    <input type="checkbox" id="accept-terms">
+                    <label for="accept-terms">I agree to the <a href="#">Terms</a></label>
+                  </p> -->
+                  <input type="submit" id="submit" value="Üye Ol">
+                  <div class="checked">
+                    <p>Üye ol'a basarak Üyelik koşullarını kabul ediyorum.</p>
+                    <p class="accept">
+                      <input type="checkbox" name="terms&conditions" id="">
+                      <label for="">
+                        Kampanyalardan haberdar olabilmem için kişisel verilerimin işlenmesini ve tarafıma elektronik ileti gönderilmesini kabul ediyorum.
+                      </label>
+                    </p>
+                    <p class="accept">
+                      <input type="checkbox" name="news" id="">
+                      <label for="">
+                        Kişisel verilerimin işlenmesine yönelik aydınlatma metnini okudum ve anladım.
+                      </label>
+                    </p>
+                  </div>
+          
+                </form>
+              </div>
+            </div>
+            <div class="overlayy">
+            </div>
+            <div class="main-popupp" style="height: 600px;">
+                <div class="popup-headerr">
+                    <div id="popupp-close-button"><i class="fa-sharp
+                    fa-2xl fa-solid fa-circle-xmark" style="color: #e38326;"></i>
+                    </div>
+                    
+                    <ul>
+                    <li><a  id="sign-inn">Bungalov Ekle</a></li>
+                    
+                    </ul>
+                </div>
+                <div class="popup-contentt" >
+                    <form action="#" class="sign-inn">
+                        <label for="ad">Ad</label>
+                        <input type="text" placeholder="Ad" id="ad">
+                        <label for="soyad">Soyad</label>
+                        <input type="text" placeholder="Soyad" id="soyad">
+                        <label for="cep">Cep Telefonu</label>
+                        <input type="text" placeholder="Cep Telefonu" id="ad">
+                        <label for="aciklama">Açıklama</label>
+                        <textarea name="" id="" cols="23" rows="5"></textarea>
+                        <button id="submitBtn" type="submit" onclick="submitForm()" class=""><i class="fa-solid fa-paper-plane"></i> Gönder</button>
+
+                    </form>
+              
+                
+          
+                
+                </div>
+            </div>
+            
         </header>

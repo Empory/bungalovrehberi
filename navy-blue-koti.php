@@ -905,57 +905,57 @@ p.check-mark label {
 
   <div class="slideshow-container">
     <div class="mySlides2">
-      <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3ad5b-2b46-4cbc-bd99-a04f316f7e6d-wshtg0.jpeg" style="width:100%">
+      <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3a190-2aab-4360-8739-245bb1b8913b-iu1vlm.jpeg" style="width:100%">
     </div>
 
     <div class="mySlides2">
-      <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3ad53-1d5a-4438-9405-4446393de9ea-gjkhzg.jpeg" style="width:100%">
+      <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3a182-dad0-492b-b19c-d547d4d93824-ikryws.jpeg" style="width:100%">
     </div>
 
     <div class="mySlides2">
-      <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3ad4b-5ba2-4bdd-aa21-6a1c64799dc4-xcamy0.jpeg" style="width:100%">
+      <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3a192-e9ea-4576-811d-6dbb1c642004-yo2-6p.jpeg" style="width:100%">
     </div>
     <div class="mySlides2">
-      <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3ad51-5ac3-4774-a7dc-185268013b60-1-n0eq.jpeg" style="width:100%">
+      <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3a186-e683-47dd-b9c4-f38fb68f711d-yjfreg.jpeg" style="width:100%">
     </div>
     <div class="mySlides2">
-      <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3ad46-9a09-4ebd-9dbf-fd956fee888f-ggj4lp.jpeg" style="width:100%">
+      <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3a181-459b-4b7d-899b-0633193f3df7-0ijvrb.jpeg" style="width:100%">
     </div>
     <div class="mySlides2">
-      <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3ad3f-550d-43fa-8ec4-ccc4d6d7fc42-l7ygtd.jpeg" style="width:100%">
+      <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3a181-459b-4b7d-899b-0633193f3df7-0ijvrb.jpeg" style="width:100%">
     </div>
     <div class="mySlides2">
-      <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3ad3d-5594-425e-ba30-27a1ae8bd7dc-7ducza.jpeg" style="width:100%">
+      <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3a18b-3c46-4dac-811b-38d3bb5ef8f7-cpnvf5.jpeg" style="width:100%">
     </div>
     <div class="mySlides2">
-      <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3ad58-51e4-4ce1-be93-ffd43d13ef94-xqyokg.jpeg" style="width:100%">
+      <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3a185-3404-476b-a6db-2d8122c544be-ypsb5w.jpeg" style="width:100%">
     </div>
     <div class="mySlides2">
-      <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3ad5c-6470-477c-96c9-2a3e339ed4b0-kctk1g.jpeg" style="width:100%">
+      <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3a189-39b1-4a0f-8f77-3b6e5ae639f9-elbfpv.jpeg" style="width:100%">
     </div>
     <div class="mySlides2">
-      <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3ad55-526c-413f-af5e-57e522d51d62-z9pqio.jpeg" style="width:100%">
+      <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3a17f-a581-44be-ae40-f08d3ebd8809-v2ejna.jpeg" style="width:100%">
     </div>
     <div class="mySlides2">
-      <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3ad54-3020-4146-9b19-a1aca32d79a2-sp4zcz.jpeg" style="width:100%">
+      <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3a17e-8396-45f3-99b1-cf5ecb763fdd-b9agzw.jpeg" style="width:100%">
     </div>
     <div class="mySlides2">
-      <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3ad4e-61aa-4cfb-84c6-95f6aa14ec82-gyq1rs.jpeg" style="width:100%">
+      <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3a17b-af13-48ba-ab1e-2de1540ca15d-fuzxlk.jpeg" style="width:100%">
     </div>
     <div class="mySlides2">
-      <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3ad44-d5a6-42eb-9bab-b2c5637d2e46-f53tdh.jpeg" style="width:100%">
+      <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3a18a-3553-48f5-871e-1971feba934e-5djtfe.jpeg" style="width:100%">
     </div>
     <div class="mySlides2">
-      <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3ad43-c0d0-498d-89eb-97446a6585ba-50vyce.jpeg" style="width:100%">
+      <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3a184-0906-482f-a97d-fe6e9c40a997-jfwyrj.jpeg" style="width:100%">
     </div>
     <div class="mySlides2">
-      <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3ad41-ae89-4038-9263-9681bfdee561-fxjhyd.jpeg" style="width:100%">
+      <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3a191-5da9-4a20-864e-2700ab7c4b04-dmwxfy.jpeg" style="width:100%">
     </div>
     <div class="mySlides2">
-      <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3ad47-c880-4d03-98af-ab95ee65e499-sdjyuw.jpeg" style="width:100%">
+      <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3a188-113d-4bdf-ae2e-0a6c313cd5d0-jva9o8.jpeg" style="width:100%">
     </div>
     <div class="mySlides2">
-      <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3ad4f-882c-4e85-855a-af40e87da405-5bhi-k.jpeg" style="width:100%">
+      <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3a17a-73b8-4f4b-b9f1-f5d2310e6b14-z8kdna.jpeg" style="width:100%">
     </div>
     <div class="mySlides2">
       <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3ad40-8857-4cb4-86ab-dfb5af0a137b-x1ree9.jpeg" style="width:100%">
@@ -967,7 +967,7 @@ p.check-mark label {
       <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3ad42-b924-4eaf-a995-8b473644fd96-hrql9d.jpeg" style="width:100%">
     </div>
     <div class="mySlides2">
-      <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3ad56-7bb3-4cfc-8871-c87613c190c1-rmgttp.jpeg" style="width:100%">
+      <img src="https://bungalovrehberi.com/storage/web/uploads/evler/97a3a177-a2a9-4600-a742-2ec6536db089-t6m1vr.jpeg" style="width:100%">
     </div>
 
     <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
@@ -975,7 +975,7 @@ p.check-mark label {
   </div>
   <div class="koti-detail">
     <div class="left">
-      <p>White Koti</p>
+      <p>Navy Blue Koti</p>
       <a href="#comment-section">
         <p>(1 Yorum)</p>
       </a>

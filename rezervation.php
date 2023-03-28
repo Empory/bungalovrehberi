@@ -22,24 +22,7 @@
         </div>
         
     </div>    
-    <!-- <div class="progress-bar-container">
-        <div id="progress-bar"></div>
-        <div class="circles-container">
-            <div class="cir activ">
-                <i style="color:white" class="fa-solid fa-check"></i>
-                <p>Bungalov Seçimi</p>
-            </div>
-            <div class="circle active">
-                <h3>2</h3>
-                <p>Kişisel Bilgiler</p>
-            </div>
-            <div class="circle ">
-                <h3>3</h3>
-                <p>Ödeme</p>
-            </div>
-            
-        </div>
-    </div> -->
+    
     <div class="white-koti">
         <div class="white-koti-title">
             <i class="fa-solid fa-home"></i>
