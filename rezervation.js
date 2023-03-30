@@ -11,6 +11,69 @@
         $('.menu-line2').classList.toggle('rotate2')
     }
     }
+    const viewBtn = document.querySelector(".share"),
+            share1 = document.getElementById("share1"),
+            share2 = document.getElementById("share2"),
+            share3 = document.getElementById("share3"),
+                share4 = document.getElementById("share4"),
+                share5 = document.getElementById("share5"),
+                share6 = document.getElementById("share6"),
+                share7 = document.getElementById("share7"),
+                body = document.querySelector("body")
+                popup = document.querySelector(".popup"),
+                close = document.querySelector(".fa-times")
+                
+                var popupContainer = document.querySelector('.popup-container');
+                
+                window.addEventListener('scroll', function() {
+                    var scrollPosition = window.scrollY;
+                    
+                });
+                share1.onclick = ()=>{ 
+                    popup.classList.toggle("show");
+                }
+                close.onclick = ()=>{
+                    share1.click();
+                }
+                share2.onclick = ()=>{ 
+                    popup.classList.toggle("show");
+                }
+                close.onclick = ()=>{
+                    share2.click();
+                }
+                share3.onclick = ()=>{ 
+                    popup.classList.toggle("show");
+                }
+                close.onclick = ()=>{
+                    share3.click();
+                }
+                share4.onclick = ()=>{ 
+                popup.classList.toggle("show");
+            }
+            close.onclick = ()=>{
+                share4.click();
+            }
+                share5.onclick = ()=>{ 
+                popup.classList.toggle("show");
+                }
+                close.onclick = ()=>{
+                    share5.click();
+                }
+                share6.onclick = ()=>{ 
+                    popup.classList.toggle("show");
+                }
+                close.onclick = ()=>{
+                    share6.click();
+                }
+                share7.onclick = ()=>{ 
+                    popup.classList.toggle("show");
+                }
+                close.onclick = ()=>{
+                    share7.click();
+                }
+                
+                
+            
   $(function() {
       
     var $overlay = $('.overlay');
