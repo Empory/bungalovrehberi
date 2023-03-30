@@ -32,7 +32,7 @@ window.onload=()=>{
   const $All = document.querySelectorAll.bind(document);
 
   $('#menu').onclick=()=>{  
-    $(".next").classList.toggle("disabled")           
+             
     $('#menu').classList.toggle('rotate')
     $('.nav-page1').classList.toggle('transform')
     $('.nav-page2').classList.toggle('transform')

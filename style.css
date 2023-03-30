@@ -213,7 +213,7 @@ header{
     flex-flow: row nowrap;
     align-items: center;
     justify-content: flex-start;
-    width: calc(100% - 96px);
+    width: calc(100% - 50px);
     max-width: 900px;
     pointer-events: auto;
   }
