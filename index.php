@@ -1,303 +1,311 @@
 <?php include("header.html")?>
-        <style>
-            .overlay {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.5);
-  z-index: 10;
-  opacity: 0;
-  visibility: hidden;
-  transition: all .5s ease;
-}
-
-.overlay.visible {
-  opacity: 1;
-  visibility: visible;
-}
-.overlayy.visible{
-  opacity: 1;
-  visibility: visible;
-}
-.main-popup {
-
-  position: fixed;
-  left: 0px;
-  top: 70px;
-  margin: 0;
-  padding: 15px;
-  max-width: 400px;
-  height: 650px;
-  background-color: #fff;
-  border-radius: 5px;
-  z-index: 9999999999;
-  opacity: 0;
-  visibility: hidden;
-  transform: translate(-50%, -50%);
-  transition: all .5s ease;
-}
-.main-popupp{
-  position: fixed;
-  left: 0px;
-  top: 70px;
-  margin: 0;
-  padding: 15px;
-  max-width: 400px;
-  height: 650px;
-  background-color: #fff;
-  border-radius: 5px;
-  z-index: 9999999999;
-  opacity: 1;
-  visibility: hidden;
-  transform: translate(-50%, -50%);
-  transition: all .5s ease;
-  /*overflow: hidden;*/
-
-}
-.main-popup.visible {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(10px);
-  transition: all .5s ease;
-}
-
-@media (min-width: 500px) {
-  .main-popup {
-    width: 500px;
-    left: 50%;
-    margin: 0 0 0 -250px;
-  }
-}
-
-.popup-header {
-  position: relative;
-  padding: 0;
-  margin: 0;
-  height: 62px;
-  width: 100%;
-}
-
-#popup-close-button i {
-  position: fixed;
-  right: 20px;
-  padding:0 20px;
-  top: 10px;
-  width: 22px;
-  height: 22px;
-}
-#popupp-close-button i{
-    position: fixed;
-    right: 20px;
-    padding:0 20px;
-    top: 10px;
-    width: 22px;
-    height: 22px;
-
-}
-
-
-
-.popup-header ul {
-  margin: 0;
-  padding: 0;
-}
-
-.popup-header ul li {
-  text-align: center;
-  list-style: none;
-  width: 50%;
-  float: left;
-}
-
-.popup-header ul li a {
-  display: block;
-  padding: 20px 0;
-  margin: 0;
-  text-decoration: none;
-  font-size: 1.2em;
-}
-
-#sign-in {
-  font-size: 20px;
-  color: black;
-  border-radius: 5px 0 0 0;
-  background-color: rgb(229,231,235);
-}
-
-#sign-in.active {
-  border-bottom: 3px solid rgb(227,131,38);
-  background-color: #fff;
-  color:black;
-}
-
-#register {
-  font-size: 20px;
-  color: black;
-  border-radius: 0 5px 0 0;
-  background-color: rgb(229,231,235);
-}
-
-#register.active {
-  border-bottom: 3px solid rgb(227,131,38);
-  background-color: #fff;
-  color: black;
-}
-
-.popup-content {
-  height: 600px;
-  overflow: auto;
-}
-
-form.sign-in {
-  position: relative; 
-  top: 40px;
-  left: 0;
-  font-size: 1em;
-  opacity: 1;
-  -webkit-transition: all .35s;
-  -moz-transition: all .35s;
-  -o-transition: all .35s;
-  transition: all .35s;
-}
-
-form.sign-in.move-left {
-  opacity: 0;
-  transform: translateX(-450px);
-}
-
-form label {
-  font-size: 1.1em;
-  color: black;
-  margin-left: 23px;
-}
-
-form.sign-in input {
-  background-color: rgb(229,231,235);
-  border-radius: 5px;
-  width: 90%;
-  height: 40px;
-  margin: 5px 5% 30px 5%;
-  padding: 10px;
-  font-size: 1em;
-  color: black;
-  outline: none;
-  border: none;
-}
-
-
-input#submit {
-  background-color: rgb(227,131,38);
-  color: #fff;
-  height: 50px;
-  width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 25px;
-  padding: 0;
-  cursor: pointer;
-  outline: none;
-  border-radius: 5px;
-  font-size: 1em;
-  border: none;
-}
-
-form.register {
-  position: relative; 
-  top: -310px;
-  left: 0;
-  font-size: 1em;
-  opacity: 0;
-  transform: translateX(450px);
-  -webkit-transition: all .35s;
-  -moz-transition: all .35s;
-  -o-transition: all .35s;
-  transition: all .35s;
-}
-form.register p:first-child{
-  text-decoration: underline;
-}
-
-form.register.move-left {
-  opacity: 1;
-  transform: translateX(0);
-}
-.warning{
-  padding-left: 15px;
-}
-form.register input[type=text],
-form.register input[type=email],
-form.register input[type=password],
-form.register select {
-  background-color: rgb(229,231,235);
-  border-radius: 5px;
-  width: 90%;
-  height: 40px;
-  margin: 5px 5% 15px 5%;
-  padding: 10px;
-  font-size: 1em;
-  color: black;
-  outline: none;
-  border: none;
-}
-
-p.check-mark {
-  position: relative;
-  left: 50%;
-  width: 200px;
-  margin: 0 0 0 -100px;
-  padding: 0;
-  text-align: center;
-  color: black;
-  font-size: .8em;
-}
-.radio{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-}
-.checked{
-  display:flex;
-  flex-direction: column;
-  text-align: center;
-}
-.accept{
-  padding: 15px;
-  text-align: center;
-  display:flex;
-
-}
-input[type=radio] {
-    border: 0px;
-    width: 100%;
-    height: 2em;
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">  
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    .overlay {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 10;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .5s ease;
+    }
     
-}
-.radio label{
-  font-size: 15px;
-}
-p.check-mark a {
-  color: #a48bb9;
-}
+    .overlay.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+    .overlayy.visible{
+        opacity: 1;
+        visibility: visible;
+        }
+        .main-popup {
+            
+            position: fixed;
+            left: 0px;
+            top: 70px;
+            margin: 0;
+            padding: 15px;
+            max-width: 400px;
+            height: 650px;
+            background-color: #fff;
+            border-radius: 5px;
+            z-index: 9999999999;
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(-50%, -50%);
+        transition: all .5s ease;
+        }
+        .main-popupp{
+            position: fixed;
+        left: 0px;
+        top: 70px;
+        margin: 0;
+        padding: 15px;
+        max-width: 400px;
+        height: 650px;
+        background-color: #fff;
+        border-radius: 5px;
+        z-index: 9999999999;
+        opacity: 1;
+        visibility: hidden;
+        transform: translate(-50%, -50%);
+        transition: all .5s ease;
+        /*overflow: hidden;*/
+        
+    }
+        .main-popup.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(10px);
+            transition: all .5s ease;
+        }
+        
+        @media (min-width: 500px) {
+            .main-popup {
+                width: 500px;
+                left: 50%;
+                margin: 0 0 0 -250px;
+        }
+        }
+        
+        .popup-header {
+            position: relative;
+            padding: 0;
+            margin: 0;
+            height: 62px;
+            width: 100%;
+        }
+        
+        #popup-close-button i {
+            position: fixed;
+            right: 20px;
+            padding:0 20px;
+            top: 10px;
+            width: 22px;
+            height: 22px;
+        }
+        #popupp-close-button i{
+            position: fixed;
+            right: 20px;
+            padding:0 20px;
+            top: 10px;
+            width: 22px;
+            height: 22px;
 
-p.check-mark input {
-  border-radius: 0;
-  width: auto;
-  height: auto;
-  margin: 0;
-  padding: 0;
-  font-size: 2em;
-  color: #ceaee8;
-  outline: none;
-  border: none;
-}
+        }
+        
+        
+        
+        .popup-header ul {
+        margin: 0;
+        padding: 0;
+        }
+        
+        .popup-header ul li {
+            text-align: center;
+            list-style: none;
+            width: 50%;
+            float: left;
+        }
+        
+        .popup-header ul li a {
+        display: block;
+        padding: 20px 0;
+        margin: 0;
+        text-decoration: none;
+        font-size: 1.2em;
+    }
+    
+        #sign-in {
+        font-size: 20px;
+        color: black;
+        border-radius: 5px 0 0 0;
+        background-color: rgb(229,231,235);
+    }
+    
+    #sign-in.active {
+        border-bottom: 3px solid rgb(227,131,38);
+        background-color: #fff;
+        color:black;
+    }
+    
+    #register {
+        font-size: 20px;
+        color: black;
+        border-radius: 0 5px 0 0;
+        background-color: rgb(229,231,235);
+    }
+    
+    #register.active {
+        border-bottom: 3px solid rgb(227,131,38);
+        background-color: #fff;
+        color: black;
+    }
 
-p.check-mark label {
-  margin-left: 5px;
-}
-        </style>
+        .popup-content {
+        height: 600px;
+        overflow: auto;
+        }
+        
+        form.sign-in {
+            position: relative; 
+            top: 40px;
+            left: 0;
+            font-size: 1em;
+            opacity: 1;
+            -webkit-transition: all .35s;
+            -moz-transition: all .35s;
+            -o-transition: all .35s;
+            transition: all .35s;
+        }
+        
+        form.sign-in.move-left {
+            opacity: 0;
+            transform: translateX(-450px);
+        }
+
+        form label {
+        font-size: 1.1em;
+        color: black;
+        margin-left: 23px;
+    }
+    
+    form.sign-in input {
+        background-color: rgb(229,231,235);
+        border-radius: 5px;
+        width: 90%;
+        height: 40px;
+        margin: 5px 5% 30px 5%;
+        padding: 10px;
+        font-size: 1em;
+        color: black;
+        outline: none;
+        border: none;
+    }
+    
+    
+    input#submit {
+        background-color: rgb(227,131,38);
+        color: #fff;
+        height: 50px;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 25px;
+        padding: 0;
+        cursor: pointer;
+        outline: none;
+        border-radius: 5px;
+        font-size: 1em;
+        border: none;
+    }
+    
+        form.register {
+            position: relative; 
+            top: -310px;
+            left: 0;
+            font-size: 1em;
+            opacity: 0;
+            transform: translateX(450px);
+            -webkit-transition: all .35s;
+            -moz-transition: all .35s;
+            -o-transition: all .35s;
+            transition: all .35s;
+        }
+        form.register p:first-child{
+        text-decoration: underline;
+        }
+
+        form.register.move-left {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .warning{
+            padding-left: 15px;
+        }
+        form.register input[type=text],
+        form.register input[type=email],
+        form.register input[type=password],
+        form.register select {
+        background-color: rgb(229,231,235);
+        border-radius: 5px;
+        width: 90%;
+        height: 40px;
+        margin: 5px 5% 15px 5%;
+        padding: 10px;
+        font-size: 1em;
+        color: black;
+        outline: none;
+        border: none;
+    }
+    
+        p.check-mark {
+        position: relative;
+        left: 50%;
+        width: 200px;
+        margin: 0 0 0 -100px;
+        padding: 0;
+        text-align: center;
+        color: black;
+        font-size: .8em;
+    }
+    .radio{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .checked{
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .accept{
+        padding: 15px;
+        text-align: center;
+        display:flex;
+        
+        }
+        input[type=radio] {
+            border: 0px;
+            width: 100%;
+            height: 2em;
+            
+        }
+        .radio label{
+            font-size: 15px;
+        }
+        p.check-mark a {
+        color: #a48bb9;
+    }
+    
+    p.check-mark input {
+        border-radius: 0;
+        width: auto;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        font-size: 2em;
+        color: #ceaee8;
+        outline: none;
+        border: none;
+    }
+    
+        p.check-mark label {
+        margin-left: 5px;
+    }
+</style>
+</head>
+<body>
+    
         <main>
             <div class="banner">
                 <img src="https://bungalovrehberi.com/web/assets/images/ust_resim.jpg" alt="">
@@ -341,19 +349,19 @@ p.check-mark label {
                                     
                                 </div>
                             </div>
-                                   
+                            
                         </div>
                         <div id="share" >
-
+                            
                             <!-- facebook -->
                             <a class="facebook" href="https://www.facebook.com/share.php?u={{url}}&title={{title}}" target="blank"><i class="fab fa-facebook-f"></i></a>
-
+                            
                             <!-- twitter -->
                             <a class="twitter" href="https://twitter.com/intent/tweet?status={{title}}+{{url}}" target="blank"><i class="fab fa-twitter"></i></a>
 
                             <!-- google plus -->
                             <a class="googleplus" href="https://plus.google.com/share?url={{url}}" target="blank"><i class="fab fa-pinterest"></i></a>
-
+                            
                             <!-- linkedin -->
                             <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url={{url}}&title={{title}}&source={{source}}" target="blank"><i class="fab fa-whatsapp"></i></a>
                             
@@ -373,12 +381,12 @@ p.check-mark label {
                                     </i>
                                     <span style>2 kişi + 1 misafir</span>
                                 </div>
-
+                                
                                 <div class="icon-slider">
                                     <i class="slider-item fa-solid fa-bed">
-                                    </i>
-                                    <span>1 çift + 2 yatak</span>
-                                </div>
+                                        </i>
+                                        <span>1 çift + 2 yatak</span>
+                                    </div>
                                 <div class="icon-slider">
                                     <i class="slider-item fas fa-utensils">
                                     </i>
@@ -396,8 +404,8 @@ p.check-mark label {
                                 </div>
                                 <div class="icon-slider">
                                     <i class="slider-item fab fa-gripfire">
-                                    </i>
-                                    <span class="ic">Şömine</span>
+                                        </i>
+                                        <span class="ic">Şömine</span>
                                 </div>
                             </ul>
                         </div>
@@ -451,7 +459,7 @@ p.check-mark label {
                         <span>2,350 ₺</span>
                         <span>%11 İNDİRİM</span>
                         <span>2,100 ₺</span>
-
+                        
                     </div>
                     <a href="white-koti.php">
                         <button class="inspect">İncele
@@ -502,22 +510,22 @@ p.check-mark label {
                                    
                         </div>
                         <div id="share" >
-
+                            
                             <!-- facebook -->
                             <a class="facebook" href="https://www.facebook.com/share.php?u={{url}}&title={{title}}" target="blank"><i class="fab fa-facebook-f"></i></a>
-
+                            
                             <!-- twitter -->
                             <a class="twitter" href="https://twitter.com/intent/tweet?status={{title}}+{{url}}" target="blank"><i class="fab fa-twitter"></i></a>
-
+                            
                             <!-- google plus -->
                             <a class="googleplus" href="https://plus.google.com/share?url={{url}}" target="blank"><i class="fab fa-pinterest"></i></a>
-
+                            
                             <!-- linkedin -->
                             <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url={{url}}&title={{title}}&source={{source}}" target="blank"><i class="fab fa-whatsapp"></i></a>
                             
                             <!-- pinterest -->
                             <a class="pinterest" href="https://pinterest.com/pin/create/bookmarklet/?media={{media}}&url={{url}}&is_video=false&description={{title}}" target="blank"><i class="fas fa-envelope"></i></a>
-  
+                            
                         </div>
 
                         
@@ -528,23 +536,23 @@ p.check-mark label {
                             <ul class="slider-items">
                                 <div class="icon-slider">
                                     <i class="slider-item fa-solid fa-user-friends">
-                                    </i>
+                                        </i>
                                     <span>2 kişi + 1 misafir</span>
                                 </div>
-
+                                
                                 <div class="icon-slider">
                                     <i class="slider-item fa-solid fa-bed">
-                                    </i>
-                                    <span>1 çift + 2 yatak</span>
-                                </div>
-                                <div class="icon-slider">
-                                    <i class="slider-item fas fa-utensils">
+                                        </i>
+                                        <span>1 çift + 2 yatak</span>
+                                    </div>
+                                    <div class="icon-slider">
+                                        <i class="slider-item fas fa-utensils">
                                     </i>
                                     <span class="ic">Kahvaltı</span>
                                 </div>
                                 <div class="icon-slider">
                                     <i class="slider-item fas fa-swimming-pool">
-                                    </i>
+                                        </i>
                                     <span >Özel Havuz</span>
                                 </div>
                                 <div style="opacity:0.4" class="icon-slider">
@@ -609,7 +617,7 @@ p.check-mark label {
                         <span class="price-before">2,750 ₺</span>
                         <span class="disc">%30 İNDİRİM</span>
                         <span>1,925 ₺</span>
-
+                        
                     </div>
                     <a href="navy-blue-koti.php">
                         <button class="inspect">İncele
@@ -657,19 +665,19 @@ p.check-mark label {
                                     
                                 </div>
                             </div>
-                                   
+                            
                         </div>
                         <div id="share" >
-
+                            
                             <!-- facebook -->
                             <a class="facebook" href="https://www.facebook.com/share.php?u={{url}}&title={{title}}" target="blank"><i class="fab fa-facebook-f"></i></a>
-
+                            
                             <!-- twitter -->
                             <a class="twitter" href="https://twitter.com/intent/tweet?status={{title}}+{{url}}" target="blank"><i class="fab fa-twitter"></i></a>
-
+                            
                             <!-- google plus -->
                             <a class="googleplus" href="https://plus.google.com/share?url={{url}}" target="blank"><i class="fab fa-pinterest"></i></a>
-
+                            
                             <!-- linkedin -->
                             <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url={{url}}&title={{title}}&source={{source}}" target="blank"><i class="fab fa-whatsapp"></i></a>
                             
@@ -686,10 +694,10 @@ p.check-mark label {
                             <ul class="slider-items">
                                 <div class="icon-slider">
                                     <i class="slider-item fa-solid fa-user-friends">
-                                    </i>
+                                        </i>
                                     <span>2 kişi + 1 misafir</span>
                                 </div>
-
+                                
                                 <div class="icon-slider">
                                     <i class="slider-item fa-solid fa-bed">
                                     </i>
@@ -697,13 +705,13 @@ p.check-mark label {
                                 </div>
                                 <div class="icon-slider">
                                     <i class="slider-item fas fa-utensils">
-                                    </i>
-                                    <span class="ic">Kahvaltı</span>
-                                </div>
-                                <div class="icon-slider">
-                                    <i class="slider-item fas fa-swimming-pool">
-                                    </i>
-                                    <span >Özel Havuz</span>
+                                        </i>
+                                        <span class="ic">Kahvaltı</span>
+                                    </div>
+                                    <div class="icon-slider">
+                                        <i class="slider-item fas fa-swimming-pool">
+                                            </i>
+                                            <span >Özel Havuz</span>
                                 </div>
                                 <div style="opacity:0.4" class="icon-slider">
                                     <i class="slider-item fas fa-hot-tub">
@@ -712,8 +720,8 @@ p.check-mark label {
                                 </div>
                                 <div class="icon-slider">
                                     <i class="slider-item fab fa-gripfire">
-                                    </i>
-                                    <span class="ic">Şömine</span>
+                                        </i>
+                                        <span class="ic">Şömine</span>
                                 </div>
                             </ul>
                         </div>
@@ -767,7 +775,7 @@ p.check-mark label {
                         <span>2,750 ₺</span>
                         <span>%20 İNDİRİM</span>
                         <span>2,200 ₺</span>
-
+                        
                     </div>
                     <a href="brown-koti.php">
                         <button class="inspect">İncele
@@ -816,27 +824,27 @@ p.check-mark label {
                                     
                                 </div>
                             </div>
-                                   
+                            
                         </div>
                         <div id="share" >
-
+                            
                             <!-- facebook -->
                             <a class="facebook" href="https://www.facebook.com/share.php?u={{url}}&title={{title}}" target="blank"><i class="fab fa-facebook-f"></i></a>
-
+                            
                             <!-- twitter -->
                             <a class="twitter" href="https://twitter.com/intent/tweet?status={{title}}+{{url}}" target="blank"><i class="fab fa-twitter"></i></a>
-
+                            
                             <!-- google plus -->
                             <a class="googleplus" href="https://plus.google.com/share?url={{url}}" target="blank"><i class="fab fa-pinterest"></i></a>
-
+                            
                             <!-- linkedin -->
                             <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url={{url}}&title={{title}}&source={{source}}" target="blank"><i class="fab fa-whatsapp"></i></a>
                             
                             <!-- pinterest -->
                             <a class="pinterest" href="https://pinterest.com/pin/create/bookmarklet/?media={{media}}&url={{url}}&is_video=false&description={{title}}" target="blank"><i class="fas fa-envelope"></i></a>
-  
+                            
                         </div>
-
+                        
                         
                     </div>
                     
@@ -848,30 +856,30 @@ p.check-mark label {
                                     </i>
                                     <span>2 kişi + 1 misafir</span>
                                 </div>
-
+                                
                                 <div class="icon-slider">
                                     <i class="slider-item fa-solid fa-bed">
-                                    </i>
-                                    <span>1 çift + 2 yatak</span>
-                                </div>
-                                <div class="icon-slider">
-                                    <i class="slider-item fas fa-utensils">
+                                        </i>
+                                        <span>1 çift + 2 yatak</span>
+                                    </div>
+                                    <div class="icon-slider">
+                                        <i class="slider-item fas fa-utensils">
                                     </i>
                                     <span class="ic">Kahvaltı</span>
                                 </div>
                                 <div class="icon-slider">
                                     <i class="slider-item fas fa-swimming-pool">
-                                    </i>
-                                    <span >Özel Havuz</span>
-                                </div>
-                                <div style="opacity:0.4" class="icon-slider">
-                                    <i class="slider-item fas fa-hot-tub">
-                                    </i>
-                                    <span class="ic">Jakuzi</span>
-                                </div>
-                                <div style="opacity:0.4" class="icon-slider">
+                                        </i>
+                                        <span >Özel Havuz</span>
+                                    </div>
+                                    <div style="opacity:0.4" class="icon-slider">
+                                        <i class="slider-item fas fa-hot-tub">
+                                            </i>
+                                            <span class="ic">Jakuzi</span>
+                                        </div>
+                                        <div style="opacity:0.4" class="icon-slider">
                                     <i class="slider-item fab fa-gripfire">
-                                    </i>
+                                        </i>
                                     <span class="ic">Şömine</span>
                                 </div>
                             </ul>
@@ -971,25 +979,25 @@ p.check-mark label {
                                     
                                 </div>
                             </div>
-                                   
+                            
                         </div>
                         <div id="share" >
-
+                            
                             <!-- facebook -->
                             <a class="facebook" href="https://www.facebook.com/share.php?u={{url}}&title={{title}}" target="blank"><i class="fab fa-facebook-f"></i></a>
-
+                            
                             <!-- twitter -->
                             <a class="twitter" href="https://twitter.com/intent/tweet?status={{title}}+{{url}}" target="blank"><i class="fab fa-twitter"></i></a>
 
                             <!-- google plus -->
                             <a class="googleplus" href="https://plus.google.com/share?url={{url}}" target="blank"><i class="fab fa-pinterest"></i></a>
-
+                            
                             <!-- linkedin -->
                             <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url={{url}}&title={{title}}&source={{source}}" target="blank"><i class="fab fa-whatsapp"></i></a>
                             
                             <!-- pinterest -->
                             <a class="pinterest" href="https://pinterest.com/pin/create/bookmarklet/?media={{media}}&url={{url}}&is_video=false&description={{title}}" target="blank"><i class="fas fa-envelope"></i></a>
-  
+                            
                         </div>
 
                         
@@ -1000,10 +1008,10 @@ p.check-mark label {
                             <ul class="slider-items">
                                 <div class="icon-slider">
                                     <i class="slider-item fa-solid fa-user-friends">
-                                    </i>
-                                    <span>2 kişi + 1 misafir</span>
-                                </div>
-
+                                        </i>
+                                        <span>2 kişi + 1 misafir</span>
+                                    </div>
+                                    
                                 <div class="icon-slider">
                                     <i class="slider-item fa-solid fa-bed">
                                     </i>
@@ -1016,19 +1024,19 @@ p.check-mark label {
                                 </div>
                                 <div class="icon-slider">
                                     <i class="slider-item fas fa-swimming-pool">
-                                    </i>
-                                    <span >Özel Havuz</span>
-                                </div>
-                                <div class="icon-slider">
-                                    <i class="slider-item fas fa-hot-tub">
-                                    </i>
-                                    <span class="ic">Jakuzi</span>
-                                </div>
+                                        </i>
+                                        <span >Özel Havuz</span>
+                                    </div>
+                                    <div class="icon-slider">
+                                        <i class="slider-item fas fa-hot-tub">
+                                            </i>
+                                            <span class="ic">Jakuzi</span>
+                                        </div>
                                 <div class="icon-slider">
                                     <i class="slider-item fab fa-gripfire">
-                                    </i>
-                                    <span class="ic">Şömine</span>
-                                </div>
+                                        </i>
+                                        <span class="ic">Şömine</span>
+                                    </div>
                             </ul>
                         </div>
                         
@@ -1081,7 +1089,7 @@ p.check-mark label {
                         <span>2,750 ₺</span>
                         <span>%20 İNDİRİM</span>
                         <span>2,200 ₺</span>
-
+                        
                     </div>
                     <a href="the-box-house.php">
                         <button class="inspect">İncele
@@ -1132,7 +1140,7 @@ p.check-mark label {
                                    
                         </div>
                         <div id="share" >
-
+                            
                             <!-- facebook -->
                             <a class="facebook" href="https://www.facebook.com/share.php?u={{url}}&title={{title}}" target="blank"><i class="fab fa-facebook-f"></i></a>
 
@@ -1141,7 +1149,7 @@ p.check-mark label {
 
                             <!-- google plus -->
                             <a class="googleplus" href="https://plus.google.com/share?url={{url}}" target="blank"><i class="fab fa-pinterest"></i></a>
-
+                            
                             <!-- linkedin -->
                             <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url={{url}}&title={{title}}&source={{source}}" target="blank"><i class="fab fa-whatsapp"></i></a>
                             
@@ -1158,25 +1166,25 @@ p.check-mark label {
                             <ul class="slider-items">
                                 <div class="icon-slider">
                                     <i class="slider-item fa-solid fa-user-friends">
-                                    </i>
-                                    <span>2 kişi + 1 misafir</span>
-                                </div>
-
-                                <div class="icon-slider">
-                                    <i class="slider-item fa-solid fa-bed">
+                                        </i>
+                                        <span>2 kişi + 1 misafir</span>
+                                    </div>
+                                    
+                                    <div class="icon-slider">
+                                        <i class="slider-item fa-solid fa-bed">
                                     </i>
                                     <span>1 çift + 2 yatak</span>
                                 </div>
                                 <div class="icon-slider">
                                     <i class="slider-item fas fa-utensils">
-                                    </i>
-                                    <span class="ic">Kahvaltı</span>
-                                </div>
-                                <div class="icon-slider">
-                                    <i class="slider-item fas fa-swimming-pool">
-                                    </i>
-                                    <span >Özel Havuz</span>
-                                </div>
+                                        </i>
+                                        <span class="ic">Kahvaltı</span>
+                                    </div>
+                                    <div class="icon-slider">
+                                        <i class="slider-item fas fa-swimming-pool">
+                                            </i>
+                                            <span >Özel Havuz</span>
+                                        </div>
                                 <div class="icon-slider">
                                     <i class="slider-item fas fa-hot-tub">
                                     </i>
@@ -1184,13 +1192,13 @@ p.check-mark label {
                                 </div>
                                 <div class="icon-slider">
                                     <i class="slider-item fab fa-gripfire">
-                                    </i>
-                                    <span class="ic">Şömine</span>
-                                </div>
-                            </ul>
-                        </div>
+                                        </i>
+                                        <span class="ic">Şömine</span>
+                                    </div>
+                                </ul>
+                            </div>
                         
-                    </section>
+                        </section>
                     <div class="check">
                         <div class="checked1">
                             <div class="checked">
@@ -1239,7 +1247,7 @@ p.check-mark label {
                         <span>3,500 ₺</span>
                         <span>%30 İNDİRİM</span>
                         <span>2,450 ₺</span>
-
+                        
                     </div>
                     <a href="tiny-house-red-door.php">
                         <button class="inspect">İncele
@@ -1288,25 +1296,25 @@ p.check-mark label {
                                     
                                 </div>
                             </div>
-                                   
+                            
                         </div>
                         <div id="share" >
-
+                            
                             <!-- facebook -->
                             <a class="facebook" href="https://www.facebook.com/share.php?u={{url}}&title={{title}}" target="blank"><i class="fab fa-facebook-f"></i></a>
-
+                            
                             <!-- twitter -->
                             <a class="twitter" href="https://twitter.com/intent/tweet?status={{title}}+{{url}}" target="blank"><i class="fab fa-twitter"></i></a>
-
+                            
                             <!-- google plus -->
                             <a class="googleplus" href="https://plus.google.com/share?url={{url}}" target="blank"><i class="fab fa-pinterest"></i></a>
-
+                            
                             <!-- linkedin -->
                             <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url={{url}}&title={{title}}&source={{source}}" target="blank"><i class="fab fa-whatsapp"></i></a>
                             
                             <!-- pinterest -->
                             <a class="pinterest" href="https://pinterest.com/pin/create/bookmarklet/?media={{media}}&url={{url}}&is_video=false&description={{title}}" target="blank"><i class="fas fa-envelope"></i></a>
-  
+                            
                         </div>
 
                         
@@ -1317,10 +1325,10 @@ p.check-mark label {
                             <ul class="slider-items">
                                 <div class="icon-slider">
                                     <i class="slider-item fa-solid fa-user-friends">
-                                    </i>
-                                    <span>2 kişi + 1 misafir</span>
-                                </div>
-
+                                        </i>
+                                        <span>2 kişi + 1 misafir</span>
+                                    </div>
+                                    
                                 <div class="icon-slider">
                                     <i class="slider-item fa-solid fa-bed">
                                     </i>
@@ -1328,25 +1336,25 @@ p.check-mark label {
                                 </div>
                                 <div class="icon-slider">
                                     <i class="slider-item fas fa-utensils">
-                                    </i>
-                                    <span class="ic">Kahvaltı</span>
-                                </div>
-                                <div class="icon-slider">
-                                    <i class="slider-item fas fa-swimming-pool">
-                                    </i>
-                                    <span >Özel Havuz</span>
-                                </div>
-                                <div class="icon-slider">
-                                    <i class="slider-item fas fa-hot-tub">
-                                    </i>
-                                    <span class="ic">Jakuzi</span>
-                                </div>
-                                <div class="icon-slider">
+                                        </i>
+                                        <span class="ic">Kahvaltı</span>
+                                    </div>
+                                    <div class="icon-slider">
+                                        <i class="slider-item fas fa-swimming-pool">
+                                            </i>
+                                            <span >Özel Havuz</span>
+                                        </div>
+                                        <div class="icon-slider">
+                                            <i class="slider-item fas fa-hot-tub">
+                                                </i>
+                                                <span class="ic">Jakuzi</span>
+                                            </div>
+                                            <div class="icon-slider">
                                     <i class="slider-item fab fa-gripfire">
-                                    </i>
-                                    <span class="ic">Şömine</span>
-                                </div>
-                            </ul>
+                                        </i>
+                                        <span class="ic">Şömine</span>
+                                    </div>
+                                </ul>
                         </div>
                         
                     </section>
@@ -1398,7 +1406,7 @@ p.check-mark label {
                         <span>4,000 ₺</span>
                         <span>%40 İNDİRİM</span>
                         <span>2,400 ₺</span>
-
+                        
                     </div>
                     <a href="tiny-house.php">
                         <button class="inspect">İncele
@@ -1408,37 +1416,46 @@ p.check-mark label {
                 </div>
             </div>
             
-           
+            
             
         </main> 
         <script text="javascript" src="script.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
         <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.24.1/feather.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
             window.onload=()=>{
-            
-            let pricebefore = document.querySelector(".price-before").textContent;
-            document.querySelector(".disc").innerHTML = pricebefore;    
-            const $ = document.querySelector.bind(document);
-            const $All = document.querySelectorAll.bind(document);
-
-            $('#menu').onclick=()=>{              
-                $('#menu').classList.toggle('rotate')
-                $('.nav-page1').classList.toggle('transform')
-                $('.nav-page2').classList.toggle('transform')
-                $('.menu-line1').classList.toggle('rotate1')
-                $('.menu-line2').classList.toggle('rotate2')
+                const $ = document.querySelector.bind(document);
+                const $All = document.querySelectorAll.bind(document);
+                
+                $('#menu').onclick=()=>{              
+                    $('#menu').classList.toggle('rotate')
+                    $('.nav-page1').classList.toggle('transform')
+                    $('.nav-page2').classList.toggle('transform')
+                    $('.menu-line1').classList.toggle('rotate1')
+                    $('.menu-line2').classList.toggle('rotate2')
+                }
             }
-
+        </script>
+        <script>
+            
+            window.onload=()=>{
+                
+                let pricebefore = document.querySelector(".price-before").textContent;
+            document.querySelector(".disc").innerHTML = pricebefore;    
+            
+            
+            
+            
             const viewBtn = document.querySelector(".share"),
-                share1 = document.getElementById("share1"),
-                share2 = document.getElementById("share2"),
-                share3 = document.getElementById("share3"),
+            share1 = document.getElementById("share1"),
+            share2 = document.getElementById("share2"),
+            share3 = document.getElementById("share3"),
                 share4 = document.getElementById("share4"),
                 share5 = document.getElementById("share5"),
                 share6 = document.getElementById("share6"),
@@ -1446,57 +1463,57 @@ p.check-mark label {
                 body = document.querySelector("body")
                 popup = document.querySelector(".popup"),
                 close = document.querySelector(".fa-times")
-    
-            var popupContainer = document.querySelector('.popup-container');
-
-            window.addEventListener('scroll', function() {
-                var scrollPosition = window.scrollY;
-
+                
+                var popupContainer = document.querySelector('.popup-container');
+                
+                window.addEventListener('scroll', function() {
+                    var scrollPosition = window.scrollY;
+                    
                 });
                 share1.onclick = ()=>{ 
-                popup.classList.toggle("show");
+                    popup.classList.toggle("show");
                 }
                 close.onclick = ()=>{
-                share1.click();
+                    share1.click();
                 }
                 share2.onclick = ()=>{ 
-                popup.classList.toggle("show");
+                    popup.classList.toggle("show");
                 }
                 close.onclick = ()=>{
-                share2.click();
+                    share2.click();
                 }
                 share3.onclick = ()=>{ 
-                popup.classList.toggle("show");
+                    popup.classList.toggle("show");
                 }
                 close.onclick = ()=>{
-                share3.click();
+                    share3.click();
                 }
                 share4.onclick = ()=>{ 
                 popup.classList.toggle("show");
-                }
-                close.onclick = ()=>{
+            }
+            close.onclick = ()=>{
                 share4.click();
-                }
+            }
                 share5.onclick = ()=>{ 
                 popup.classList.toggle("show");
                 }
                 close.onclick = ()=>{
-                share5.click();
+                    share5.click();
                 }
                 share6.onclick = ()=>{ 
-                popup.classList.toggle("show");
+                    popup.classList.toggle("show");
                 }
                 close.onclick = ()=>{
-                share6.click();
+                    share6.click();
                 }
                 share7.onclick = ()=>{ 
-                popup.classList.toggle("show");
+                    popup.classList.toggle("show");
                 }
                 close.onclick = ()=>{
-                share7.click();
+                    share7.click();
                 }
                 
-        
+                
             }
             $(function() {
                 var $overlay = $('.overlay');
@@ -1512,22 +1529,22 @@ p.check-mark label {
                 
                 function initialState() {
                     $('.underline').css({
-                    "width": $firstChild.width(),
-                    "left": $firstChild.position().left,
-                    "top": $firstChild.position().top + $firstChild.outerHeight(true) + 'px'
+                        "width": $firstChild.width(),
+                        "left": $firstChild.position().left,
+                        "top": $firstChild.position().top + $firstChild.outerHeight(true) + 'px'
                     });
                 }
                 initialState();
                 
                 function changeUnderline(el) {
                     $('.underline').css({
-                    "width": el.width(),
+                        "width": el.width(),
                     "left": el.position().left,
                     "top": el.position().top + el.outerHeight(true) + 'px'
-                    });
-                } 
+                });
+            } 
                 
-                $firstChild.on('click', function(){
+            $firstChild.on('click', function(){
                     var el = $firstChild;
                     changeUnderline(el);
                     $secondChild.removeClass('active');
@@ -1604,9 +1621,9 @@ p.check-mark label {
                 
                 function initialState() {
                     $('.underline').css({
-                    "width": $firstChild.width(),
-                    "left": $firstChild.position().left,
-                    "top": $firstChild.position().top + $firstChild.outerHeight(true) + 'px'
+                        "width": $firstChild.width(),
+                        "left": $firstChild.position().left,
+                        "top": $firstChild.position().top + $firstChild.outerHeight(true) + 'px'
                     });
                 }
                 initialState(); 
@@ -1614,9 +1631,9 @@ p.check-mark label {
                 
                 function changeUnderline(el) {
                     $('.underline').css({
-                    "width": el.width(),
-                    "left": el.position().left,
-                    "top": el.position().top + el.outerHeight(true) + 'px'
+                        "width": el.width(),
+                        "left": el.position().left,
+                        "top": el.position().top + el.outerHeight(true) + 'px'
                     });
                 } 
                 
@@ -1682,5 +1699,7 @@ p.check-mark label {
                 });
             });
         </script>
+    </body>
+    </html>
 <?php include("footer.html")?>
-    
+
