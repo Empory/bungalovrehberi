@@ -456,10 +456,9 @@
                         </div>
                     </div>
                     <div class="price">
-                        <div class="top">
-                            <span>2,350 ₺</span>
-                            <span>%11 İNDİRİM</span>
-                        </div>
+                    
+                        <span>2,350 ₺</span>
+                        <span>%11 İNDİRİM</span>
                         <span>2,100 ₺</span>
                         
                     </div>
